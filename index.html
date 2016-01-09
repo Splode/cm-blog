@@ -1,3 +1,11 @@
 ---
 layout: default
 ---
+{% for post in paginator.posts %}
+<article>
+    <header>
+        <h3><a href="{{site.baseurl}}{{post.url}}" rel="bookmark" title="Permanent link to {{site.baseurl}}{{post.url}}">{{post.title}}</a></h3>
+        <time itemprop="dateCreated" datetime="{{post.date}}">{{post.date | date:"%B %-d, %Y"}}</time>
+    </header>
+</article>
+{% endfor %}
