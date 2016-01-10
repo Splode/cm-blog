@@ -1,5 +1,119 @@
-main {
+article {
+    margin-top: 6em;
+    width: 75%;
+}
+
+article.preview {
+    
+    a {
+        color: $brightPurple;
+        font-weight: bold;
+    }
+    
+    h2 {
+        font-size: 1.75em;
+        margin: 1em 0 .5em 0
+    }
+    
+    img {
+        height: auto;
+        width: 100%;
+    }
+    
+    p {    
+        margin-bottom: .5em;
+        margin-top: 0;
+    }
+    
+    time {
+        display: inline-block;
+        padding-bottom: 1em;
+    }
+    
+    .tagline {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+}
+
+aside {
+    float: right;
+    width: 20%;
+    
+    h3 {margin-top: 0;}
+}
+
+.wrapper {
     margin: 0 auto;
     max-width: 1080px;
     padding: 0 2.5%;
+}
+
+nav {
+    background-color: $plum;
+    border-bottom: 2px solid $brightPurple;
+    height: 75px;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 2.5%;
+    }
+    
+    ul, li {
+        color: $white;
+        display: inline-block;
+        font-family: $headFont;
+        list-style-type: none;
+        margin: 0;
+        text-align: right;
+    }
+    
+    li {padding-right: 2em;}
+    li:last-of-type {padding-right: 0;}
+    
+    .logo {margin-top: -5px;}
+    .logo svg {height: 35px;}
+    .logo a svg .st0 {transition: fill .25s ease-in-out;}
+    
+    @media only screen and (min-width: 960px) and (min-resolution: 72dpi) {
+        .logo a svg:hover .st0 {fill: #fff;}
+    }
+    
+    @media only screen and (max-width: 390px) {
+        ul, li {display: block;}
+        li {padding-right: 0;}
+        
+        .logo {float: left;}
+        
+        .wrapper {display: block;}
+    }
+}
+
+.masthead {
+    background-color: $plum;
+    min-width: 100%;
+    
+    h1 {
+        color: $white;
+        font-size: 2.75em;
+        padding-top: 3em;
+    }
+    
+    p {
+        color: $brightPurple;
+        font-size: 1.33em;
+        margin-top: 0;
+        padding-bottom: 4em;
+    }
+    
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 6em;
+    }
 }

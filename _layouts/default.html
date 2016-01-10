@@ -3,10 +3,9 @@
     {% include head.html %}
 <body>
     {% include header.html %}
-    <main>
+    <main class="wrapper">
+        {% include sidebar.html %}
         {{ content }}
-        <h1>Test Heading</h1>
-        <p>Test body</p>
     </main>
     <!-- Footer -->
     {% include footer.html %}

@@ -1,5 +1,6 @@
 # Site settings
 title: Christopher Murphy - Blog
+tagline: "A simple blog about complex things."
 email: christopherianmurphy@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog of Christopher Murphy, front-end designer and developer.
