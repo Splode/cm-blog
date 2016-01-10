@@ -15,17 +15,19 @@ body {
 
 blockquote {
     color: $plumMeat;
-    border-left: 4px solid $plumMeat;
+    border-left: 2px solid $plumMeat;
     font-size: 18px;
-    letter-spacing: -1px;
     font-style: italic;
 
     > :last-child {
         margin-bottom: 0;
     }
+    
+    p {padding-left: 2em;}
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color: $brightPurple;
     font-family: $headFont;
 }
 
@@ -33,15 +35,15 @@ p {
     color: $plumMeat;
     font-family: $bodyFont;
     letter-spacing: .075em;
+    line-height: 1.5em;
 }
 
 // Code formating
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: $grey;
 }
 
 code {
@@ -57,4 +59,30 @@ pre {
         padding-right: 0;
         padding-left: 0;
     }
+}
+
+.linkUnderline {position: relative;}
+
+.linkUnderline:before {
+	background-color: $brightPurple;
+	bottom: 0;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out 0s;
+}
+
+@media only screen and (min-width: 960px) and (min-resolution: 72dpi) {
+    a:hover {color: #6b59ef;}
+	
+	.linkUnderline:hover {color: #6b59ef;}
+	
+	.linkUnderline:hover:before {
+		visibility: visible;
+		transform: scaleX(1);
+	}
 }
