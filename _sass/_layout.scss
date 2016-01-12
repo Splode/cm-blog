@@ -2,7 +2,7 @@ article {
     margin-top: 6em;
     width: 75%;
     
-    @media only screen and (max-width: 390px) {
+    @media only screen and (max-width: $tablet) {
         width: 100%;
     }
 }
@@ -49,7 +49,7 @@ aside {
     
     h3 {margin-top: 0;}
     
-    @media only screen and (max-width: 390px) {
+    @media only screen and (max-width: $tablet) {
         position: inherit;
         width: 100%;
     }
@@ -97,15 +97,11 @@ nav {
         .logo a svg:hover .st0 {fill: #fff;}
     }
     
-    @media only screen and (max-width: 390px) {
+    @media only screen and (max-width: $tablet) {
         ul {
-            //align-items: center;
             background-color: $plum;
-            //display: flex;
             display: none;
-            //flex-direction: column;
             height: 100vh;
-            //justify-content: center;
             left: 0;
             margin-top: 75px;
             padding: 0;
@@ -158,13 +154,15 @@ nav {
 }
 
 .menu-icon {
-    background-color: $grey;
+    background: url(../assets/images/hamburger.svg) no-repeat;
+    background-position: top right;
+    background-size: 50%;
     display: none;
     float: right;
     height: 60px;
     width: 60px;
     
-    @media only screen and (max-width: 390px) {
+    @media only screen and (max-width: $tablet) {
         display: block;
     }
 }
