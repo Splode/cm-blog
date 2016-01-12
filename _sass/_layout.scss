@@ -98,8 +98,34 @@ nav {
     }
     
     @media only screen and (max-width: 390px) {
-        ul, li {display: block;}
-        li {padding-right: 0;}
+        ul {
+            //align-items: center;
+            background-color: $plum;
+            //display: flex;
+            display: none;
+            //flex-direction: column;
+            height: 100vh;
+            //justify-content: center;
+            left: 0;
+            margin-top: 75px;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+        
+        ul a {padding: 1em 4em;}
+        
+        li {
+            border-bottom: 2px solid $brightPurple;
+            font-size: 1.5em;
+            padding: 1.25em 0;
+            text-align: center;
+            width: 100%;
+        }
+        
+        li:last-of-type {border-bottom: none;}
         
         .logo {float: left;}
         
@@ -128,5 +154,17 @@ nav {
         display: flex;
         flex-direction: column;
         margin-bottom: 6em;
+    }
+}
+
+.menu-icon {
+    background-color: $grey;
+    display: none;
+    float: right;
+    height: 60px;
+    width: 60px;
+    
+    @media only screen and (max-width: 390px) {
+        display: block;
     }
 }
