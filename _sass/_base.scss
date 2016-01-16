@@ -3,7 +3,7 @@ a {
 	text-decoration: none;
 	transition: color .25s ease-in-out;
     
-    @media only screen and (min-width: 960px) and (min-resolution: 72dpi) {
+    @media only screen and (min-width: $desktop) {
         a:hover {color: #6b59ef;}
     }
 }
@@ -41,6 +41,8 @@ p {
     letter-spacing: .075em;
     line-height: 2em;
 }
+
+ul {list-style-type: none;}
 
 time {font-size: .75em;}
 
@@ -82,7 +84,7 @@ pre {
 	transition: all 0.3s ease-in-out 0s;
 }
 
-@media only screen and (min-width: 960px) and (min-resolution: 72dpi) {
+@media only screen and (min-width: $desktop) {
 	
 	.linkUnderline:hover {color: #6b59ef;}
 	

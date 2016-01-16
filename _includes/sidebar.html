@@ -1,3 +1,11 @@
+<!-- Capture and Sort Post Categories -->
+{% capture siteCategories %}{% for category in site.categories %}{{category | first}}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign sortedCategories = siteCategories | split:',' | sort %}
 <aside>
     <h3>Tags</h3>
+    <ul class="tags">
+    {% for category in sortedCategories %}
+    	<li><a href="{{site.baseurl}}/archive.html#{{category | cgi_escape}}" class="linkUnderline">{{category}}</a></li>
+   	{% endfor %}
+   	</ul>
 </aside>

@@ -1,6 +1,27 @@
 article {
-    margin-top: 6em;
-    width: 75%;
+    margin-top: 3em;
+    width: $widthMain;
+
+    footer {
+        border-top: 2px solid $brightPurple;
+        padding-bottom: 3em;
+        padding-top: 1em;
+        margin-top: 2em;
+
+        p {
+            display: inline;
+            text-indent: 0;
+        }
+
+        time {font-size: 1em;}
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+
+    p {text-indent: 2em;}
     
     @media only screen and (max-width: $tablet) {
         width: 100%;
@@ -8,6 +29,7 @@ article {
 }
 
 article.preview {
+    margin-top: 6em;
     
     a {
         color: $brightPurple;
@@ -19,14 +41,10 @@ article.preview {
         margin: 1em 0 .5em 0
     }
     
-    img {
-        height: auto;
-        width: 100%;
-    }
-    
     p {    
         margin-bottom: .5em;
         margin-top: 0;
+        text-indent: 0;
     }
     
     time {
@@ -51,15 +69,9 @@ aside {
     
     @media only screen and (max-width: $tablet) {
         position: inherit;
+        text-align: center;
         width: 100%;
     }
-}
-
-.wrapper {
-    margin: 0 auto;
-    max-width: 1080px;
-    padding: 0 2.5%;
-    position: relative;
 }
 
 nav {
@@ -93,7 +105,7 @@ nav {
     .logo svg {height: 35px;}
     .logo a svg .st0 {transition: fill .25s ease-in-out;}
     
-    @media only screen and (min-width: 960px) and (min-resolution: 72dpi) {
+    @media only screen and (min-width: $desktop) {
         .logo a svg:hover .st0 {fill: #fff;}
     }
     
@@ -129,6 +141,32 @@ nav {
     }
 }
 
+.archive {
+
+    h4 {
+        color: $plumMeat;
+        display: inline;
+    }
+
+    @media only screen and (max-width: $tablet) {
+        border-bottom: 2px solid $brightPurple;
+        margin-bottom: 2em;
+    }
+}
+
+.footer {
+    background-color: $plum;
+    clear: both;
+    min-width: 100%;
+    padding: 2em 0;
+    text-align: center;
+
+    p {
+        font-size: .85em;
+        margin: 0;
+    }
+}
+
 .masthead {
     background-color: $plum;
     min-width: 100%;
@@ -153,6 +191,22 @@ nav {
     }
 }
 
+.masthead--post {
+    background-color: $white;
+
+    h1 {color: $plum;}
+
+    p {
+        color: $plumMeat;
+        padding-bottom: 1em;
+    }
+
+    .wrapper {
+        border-bottom: 2px solid $brightPurple;
+        margin-bottom: 2em;
+    }
+}
+
 .menu-icon {
     background: url(../assets/images/hamburger.svg) no-repeat;
     background-position: top right;
@@ -165,4 +219,39 @@ nav {
     @media only screen and (max-width: $tablet) {
         display: block;
     }
+}
+
+.paginator {
+    border-top: 2px solid $brightPurple;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    width: $widthMain;
+
+    a {
+        color: $brightPurple;
+        font-weight: bold;
+    }
+
+    @media only screen and (max-width: $tablet) {width: 100%;}
+}
+
+.tags {
+    color: $plumMeat;
+    font-size: .85em;
+    padding: 0;
+
+    li {
+        background-color: $grey;
+        display: inline-block;
+        padding: .5em;
+        margin-bottom: .5em;
+    }
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1080px;
+    padding: 0 2.5%;
+    position: relative;
 }

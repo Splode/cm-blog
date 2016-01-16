@@ -4,4 +4,13 @@ page-type: post
 ---
 <article>
     {{content}}
+    <footer>
+    	
+    	<p>Written by <strong>{{page.author}}</strong> &mdash; </p><time itemprop="dateCreated" datetime="{{page.date}}">{{page.date | date:"%B %-d, %Y"}}</time>
+    	<ul class="tags">
+    		{% for category in page.categories %}
+    			<li><a href="{{site.baseurl}}/archive.html#{{category | cgi_escape}}" class="linkUnderline">{{category}}</a></li>
+    		{% endfor %}
+    	</ul>
+    </footer>
 </article>
