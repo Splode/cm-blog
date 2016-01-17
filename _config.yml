@@ -16,6 +16,6 @@ kramdown:
 gems: 
  - jekyll-paginate
  - octopress-autoprefixer
-paginate: 2
+paginate: 6
 paginate_path: 'blog/page:num'
 permalink: /blog/:title
