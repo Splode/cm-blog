@@ -5,7 +5,7 @@ layout: default
 <article class="preview">
     <header>
         <img src="{{post.image}}" title="{{post.title}}" alt="{{post.title}} preview image">
-        <h2><a href="{{site.baseurl}}{{post.url}}" rel="bookmark" class="linkUnderline" title="Permanent link to {{site.baseurl}}{{post.url}}.html">{{post.title}}</a></h2>
+        <h2><a href="{{site.baseurl}}{{post.url}}" rel="bookmark" class="linkUnderline" title="Permanent link to {{site.baseurl}}{{post.url}}">{{post.title}}</a></h2>
         <p class="tagline">{{post.tagline}}</p>
         <time itemprop="dateCreated" datetime="{{post.date}}">{{post.date | date:"%B %-d, %Y"}}</time>
         <p>{{post.excerpt | strip_html}} <a href="{{site.baseurl}}{{post.url}}" title="read more" class="linkUnderline">Read more...</a></p>
