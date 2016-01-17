@@ -2,4 +2,5 @@ _site
 .sass-cache
 .jekyll-metadata
 assets
-index.sublime-workspace
+*.sublime-workspace
+*.sublime-project
