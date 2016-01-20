@@ -232,9 +232,27 @@ nav {
     @media only screen and (max-width: $tablet) {width: 100%;}
 }
 
+.recent {
+    padding: 0;
+
+    h4 {
+        color: $plumMeat;
+        margin: 0;
+        padding: 0;
+    }
+
+    time {
+        display: inline-block;
+        font-size: .85em;
+        margin: 0 0 1em 0;
+        padding: 0;
+    }
+}
+
 .tags {
     color: $plumMeat;
     font-size: .85em;
+    margin-bottom: 3em;
     padding: 0;
 
     li {

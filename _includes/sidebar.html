@@ -8,12 +8,13 @@
     	<li><a href="{{site.baseurl}}/archive.html#{{category | cgi_escape}}" class="linkUnderline">{{category}}</a></li>
    	{% endfor %}
    	</ul>
-</aside>
-<aside>
 	<h3>Recent Posts</h3>
-	<ul>
-	{% for post in site.posts limit: 20 %}
-		<li>{{ post.title }}</li>
+	<ul class="recent">
+	{% for post in site.posts limit: 10 %}
+		<li>
+			<h4><a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}" class="linkUnderline">{{ post.title }}</a></h4>
+			<time itemprop="dateCreated" datetime="{{post.date}}">{{post.date | date:"%B %-d, %Y"}}</time>
+		</li>
 	{% endfor %}
 	</ul>
 </aside>
