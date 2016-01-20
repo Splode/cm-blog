@@ -9,3 +9,11 @@
    	{% endfor %}
    	</ul>
 </aside>
+<aside>
+	<h3>Recent Posts</h3>
+	<ul>
+	{% for post in site.posts limit: 20 %}
+		<li>{{ post.title }}</li>
+	{% endfor %}
+	</ul>
+</aside>
