@@ -5,7 +5,7 @@
     <h3>Tags</h3>
     <ul class="tags">
     {% for category in sortedCategories %}
-    	<li><a href="{{site.baseurl}}/archive.html#{{category | cgi_escape}}" class="linkUnderline">{{category}}</a></li>
+    	<li><a href="{{site.baseurl}}/archive.html#{{category | cgi_escape}}" class="button">{{category}}</a></li>
    	{% endfor %}
    	</ul>
 	<h3>Recent Posts</h3>

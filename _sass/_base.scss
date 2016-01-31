@@ -4,7 +4,7 @@ a {
 	transition: color .25s ease-in-out;
     
     @media only screen and (min-width: $desktop) {
-        a:hover {color: #6b59ef;}
+        a:hover {color: $brightPurple;}
     }
 }
 
@@ -30,6 +30,13 @@ blockquote {
     p {padding-left: 2em;}
 }
 
+figcaption {
+    font-size: .9em;
+    font-style: italic;
+    padding-bottom: 2em;
+    margin-top: -.5em;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: $brightPurple;
     font-family: $headFont;
@@ -38,7 +45,6 @@ h1, h2, h3, h4, h5, h6 {
 p {
     color: $plumMeat;
     font-family: $bodyFont;
-    letter-spacing: .075em;
     line-height: 2em;
 }
 
@@ -61,6 +67,7 @@ code {
 pre {
     padding: 8px 12px;
     overflow-x: auto;
+    white-space: pre-wrap;
 
     > code {
         border: 0;
@@ -86,7 +93,7 @@ pre {
 
 @media only screen and (min-width: $desktop) {
 	
-	.linkUnderline:hover {color: #6b59ef;}
+	.linkUnderline:hover {color: $brightPurple;}
 	
 	.linkUnderline:hover:before {
 		visibility: visible;

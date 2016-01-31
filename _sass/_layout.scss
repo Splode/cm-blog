@@ -2,27 +2,41 @@ article {
     margin-top: 3em;
     width: $widthMain;
 
+    a {
+        color: $brightPurple;
+        position: relative;
+
+        &:hover {color: $plumMeat;}
+    }
+
     footer {
         border-top: 2px solid $brightPurple;
-        padding-bottom: 3em;
+        //padding-bottom: 3em;
         padding-top: 1em;
         margin-top: 2em;
 
         p {display: inline;}
 
         time {font-size: 1em;}
+
+        @media only screen and (max-width: $tablet) {border-bottom: 2px solid $brightPurple;}
+    }
+
+    h2 {margin: 1em 0 .5em 0;}
+    h2:first-child {margin-top: 0;}
+    h3 {
+        color: $plumMeat;
+        margin: 0 0 .5em 0;
     }
 
     img {
         height: auto;
         width: 100%;
     }
-    
-    @media only screen and (max-width: $tablet) {
-        width: 100%;
 
-        p {text-align: justify;}
-    }
+    p {margin: 0 0 1em 0;}
+    
+    @media only screen and (max-width: $tablet) {width: 100%;}
 }
 
 article.preview {
@@ -64,6 +78,7 @@ aside {
     h3 {margin-top: 0;}
     
     @media only screen and (max-width: $tablet) {
+        padding-top: 2em;
         position: inherit;
         text-align: center;
         width: 100%;
@@ -144,9 +159,24 @@ nav {
         display: inline;
     }
 
+    a {color: inherit;}
+
     @media only screen and (max-width: $tablet) {
         border-bottom: 2px solid $brightPurple;
         margin-bottom: 2em;
+    }
+}
+
+.button {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    color: $plumMeat;
+    display: inline-block;
+    padding: .5em 1em;
+    transition: all .3s ease-in-out;
+
+    &:hover, &:active, &:focus {
+        background-color: $brightPurple;
+        color: $white;
     }
 }
 
@@ -218,6 +248,7 @@ nav {
 }
 
 .paginator {
+    border-bottom: 2px solid $brightPurple;
     border-top: 2px solid $brightPurple;
     display: flex;
     justify-content: space-between;
@@ -258,7 +289,7 @@ nav {
     li {
         background-color: $grey;
         display: inline-block;
-        padding: .5em;
+        //padding: .5em;
         margin-bottom: .5em;
     }
 }
