@@ -4,6 +4,7 @@ title: "Pure CSS Responsive Flex Menu"
 tagline: "Making a pure CSS responsive menu using flexbox."
 date: 2016-01-23
 author: Christopher Murphy
+description: This resource is a responsive menu based on CSS using flexbox. It relies upon a checkbox input to toggle between states and can therefore be used as an alternative to javascript-based solutions.
 excerpt: This resource is a responsive menu based on CSS using flexbox. It relies upon a checkbox input to toggle between states and can therefore be used as an alternative to javascript-based solutions.
 image: assets/images/posts/001_cssMenu/cssMenu.gif
 categories: css navigation front-end responsive menu
