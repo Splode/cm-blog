@@ -1,10 +1,10 @@
 # Site settings
 title: Christopher Murphy - Blog
-tagline: "A simple blog about complex things."
+tagline: "Exploring front-end development and design."
 email: christopherianmurphy@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Blog of Christopher Murphy, front-end designer and developer.
-baseurl: "./" # the subpath of your site, e.g. /blog
+  Blog of Christopher Murphy, front-end developer and designer.
+baseurl: "" # the subpath of your site, e.g. /blog. This needs to be set to "" at build-time. Set to "./" to preview local build.
 url: "http://blog.christopherianmurphy.com" # the base hostname & protocol for your site
 twitter_username: splode
 github_username:  splode
