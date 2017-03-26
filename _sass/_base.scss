@@ -1,11 +1,12 @@
 a {
 	color: inherit;
 	text-decoration: none;
-	transition: color .25s ease-in-out;
-    
-    @media only screen and (min-width: $desktop) {
-        a:hover {color: $brightPurple;}
-    }
+	transition: color 0.25s ease-in-out;
+	@media only screen and (min-width: $desktop) {
+		a:hover {
+			color: $brightPurple;
+		}
+	}
 }
 
 body {
@@ -18,65 +19,77 @@ body {
 }
 
 blockquote {
-    color: $plumMeat;
-    border-left: 2px solid $plumMeat;
-    font-size: 18px;
-    font-style: italic;
+	color: $plumMeat;
+	border-left: 2px solid $plumMeat;
+	font-size: 18px;
+	font-style: italic;
 
-    > :last-child {
-        margin-bottom: 0;
-    }
-    
-    p {padding-left: 2em;}
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	p {
+		padding-left: 2em;
+	}
 }
 
 figcaption {
-    font-size: .9em;
-    font-style: italic;
-    padding-bottom: 2em;
-    margin-top: -.5em;
+	font-size: 0.9em;
+	font-style: italic;
+	padding-bottom: 2em;
+	margin-top: -.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: $brightPurple;
-    font-family: $headFont;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $brightPurple;
+	font-family: $headFont;
 }
 
 p {
-    color: $plumMeat;
-    font-family: $bodyFont;
-    line-height: 2em;
+	color: $plumMeat;
+	font-family: $bodyFont;
+	line-height: 2em;
 }
 
-ul {list-style-type: none;}
+ul {
+	list-style-type: none;
+}
 
-time {font-size: .85em;}
-
+time {
+	font-size: 0.85em;
+}
 // Code formating
-pre,
-code {
-    font-size: 15px;
-    border-radius: 3px;
-    background-color: $grey;
+code,
+pre {
+	font-size: 15px;
+	border-radius: 3px;
+	background-color: $grey;
 }
 
 code {
-    padding: 1px 5px;
+	padding: 1px 5px;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: auto;
-    white-space: pre-wrap;
+	padding: 8px 12px;
+	overflow-x: auto;
+	white-space: pre-wrap;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+	> code {
+		border: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 
-.linkUnderline {position: relative;}
+.linkUnderline {
+	position: relative;
+}
 
 .linkUnderline:before {
 	background-color: $brightPurple;
@@ -90,11 +103,11 @@ pre {
 	transform: scaleX(0);
 	transition: all 0.3s ease-in-out 0s;
 }
-
 @media only screen and (min-width: $desktop) {
-	
-	.linkUnderline:hover {color: $brightPurple;}
-	
+	.linkUnderline:hover {
+		color: $brightPurple;
+	}
+
 	.linkUnderline:hover:before {
 		visibility: visible;
 		transform: scaleX(1);

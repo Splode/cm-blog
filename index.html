@@ -3,24 +3,21 @@ layout: default
 ---
 {% for post in paginator.posts %}
 <article class="preview">
-    <header>
-        <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}"><img src="{{post.image}}" title="{{post.title}}" alt="{{post.title}} preview image"></a>
-        <h2><a href="{{site.baseurl}}{{post.url}}" rel="bookmark" class="linkUnderline" title="Permanent link to {{site.baseurl}}{{post.url}}">{{post.title}}</a></h2>
-        <p class="tagline">{{post.tagline}}</p>
-        <time itemprop="dateCreated" datetime="{{post.date}}">{{post.date | date:"%B %-d, %Y"}}</time>
-        <p>{{post.excerpt | strip_html}} <a href="{{site.baseurl}}{{post.url}}" title="read more" class="linkUnderline">Read more...</a></p>
-    </header>
+  <header>
+    <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}"><img src="{{post.image}}" title="{{post.title}}" alt="{{post.title}} preview image"></a>
+    <h2><a href="{{site.baseurl}}{{post.url}}" rel="bookmark" class="linkUnderline" title="Permanent link to {{site.baseurl}}{{post.url}}">{{post.title}}</a></h2>
+    <p class="tagline">{{post.tagline}}</p>
+    <time itemprop="dateCreated" datetime="{{post.date}}">{{post.date | date:"%B %-d, %Y"}}</time>
+    <p>{{post.excerpt | strip_html}} <a href="{{site.baseurl}}{{post.url}}" title="read more" class="linkUnderline">Read more...</a></p>
+  </header>
 </article>
 {% endfor %}
 <div class="paginator">
-    {% if paginator.next_page %}
-    	<p><a href="{{site.baseurl}}/blog/page{{paginator.next_page}}" class="linkUnderline">older entries</a></p>
-    {% endif %}
-    {% if paginator.previous_page %}
-    	{% if paginator.previous_page == 1 %}
-			<p><a href="{{site.baseurl}}/" class="linkUnderline">newer entries</a></p>
-    	{% else %}
-    		<p><a href="{{site.baseurl}}/blog/page{{paginator.previous_page}}" class="linkUnderline">newer entries</a></p>
-    	{% endif %}
-    {% endif %}
+  {% if paginator.next_page %}
+  <p><a href="{{site.baseurl}}/blog/page{{paginator.next_page}}" class="linkUnderline">older entries</a></p>
+  {% endif %} {% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
+  <p><a href="{{site.baseurl}}/" class="linkUnderline">newer entries</a></p>
+  {% else %}
+  <p><a href="{{site.baseurl}}/blog/page{{paginator.previous_page}}" class="linkUnderline">newer entries</a></p>
+  {% endif %} {% endif %}
 </div>
