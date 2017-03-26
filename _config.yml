@@ -13,9 +13,8 @@ github_username:  splode
 markdown: kramdown
 kramdown:
     auto_ids: false
-gems: 
- - jekyll-paginate
- - octopress-autoprefixer
+gems:
+- jekyll-paginate
 paginate: 6
 paginate_path: 'blog/page:num'
 permalink: /:year/:month/:title.html
