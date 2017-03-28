@@ -4,14 +4,14 @@ title: "Pure CSS Responsive Flex Menu"
 tagline: "Making a pure CSS responsive menu using flexbox."
 date: 2016-01-23
 author: Christopher Murphy
-description: This resource is a responsive menu based on CSS using flexbox. It relies upon a checkbox input to toggle between states and can therefore be used as an alternative to javascript-based solutions.
-excerpt: This resource is a responsive menu based on CSS using flexbox. It relies upon a checkbox input to toggle between states and can therefore be used as an alternative to javascript-based solutions.
+description: This resource is a responsive menu based on CSS using flexbox. It relies upon a checkbox input to toggle between states and can therefore be used as an alternative to JavaScript-based solutions.
+excerpt: This resource is a responsive menu based on CSS using flexbox. It relies upon a checkbox input to toggle between states and can therefore be used as an alternative to JavaScript-based solutions.
 image: assets/images/posts/001_cssMenu/cssMenu.gif
-categories: css navigation front-end responsive menu
+categories: CSS navigation front-end responsive
 ---
 
 ## What We'll be Making
-This resource is a responsive menu based on CSS using flexbox. It relies upon a checkbox input to toggle between states and can therefore be used as an alternative to javascript-based solutions. For desktop-sized displays, the menu will display as a list of text links, while on mobile devices, the menu will display as an icon that toggles the display of text links.
+This resource is a responsive menu based on CSS using flexbox. It relies upon a checkbox input to toggle between states and can therefore be used as an alternative to JavaScript-based solutions. For desktop-sized displays, the menu will display as a list of text links, while on mobile devices, the menu will display as an icon that toggles the display of text links.
 
 ![Pure CSS Responsive Menu]({{ site.baseurl }}/assets/images/posts/001_cssMenu/cssMenu.gif "Pure CSS Responsive Menu")
 <figcaption>A fully responsive menu on mobile devices using CSS.</figcaption>
@@ -92,7 +92,7 @@ We ensure that the navigation stays at the top of the browser window by giving i
 }
 {% endhighlight %}
 
-Lastly, we'll give our logo placeholder some defintion by giving it a `height`, `width` and `background-color`.
+Lastly, we'll give our logo placeholder some definition by giving it a `height`, `width` and `background-color`.
 
 {% highlight scss %}
 .logo {
@@ -123,9 +123,9 @@ nav {
  }
 {% endhighlight %}
 
-Next we'll target our navigation links by nesting them within our `nav` element. In the same manner that we set our `nav .wrapper` to display as a flex container, we can set give the `ul` the `display: flex` and `justify-content: space-between` properties to control the spacing between our list items. Traditionally, we might achieve spacing between list items using right and left padding. The flexbox model allows the spacing between these items to be intelligently adjusted. 
+Next we'll target our navigation links by nesting them within our `nav` element. In the same manner that we set our `nav .wrapper` to display as a flex container, we can set give the `ul` the `display: flex` and `justify-content: space-between` properties to control the spacing between our list items. Traditionally, we might achieve spacing between list items using right and left padding. The flexbox model allows the spacing between these items to be intelligently adjusted.
 
-We set our list items to `display: inline-block` so that they don't stack. We'll aslo add a bit of transitioning to our anchors for a bit of visual interest.
+We set our list items to `display: inline-block` so that they don't stack. We'll also add a bit of transitioning to our anchors for a bit of visual interest.
 
 {% highlight scss %}
 nav {
@@ -134,7 +134,7 @@ nav {
     justify-content: space-between;
     list-style-type: none;
     width: 50%;
-    
+
     a {
       color: $color1;
       text-decoration: none;
@@ -143,7 +143,7 @@ nav {
       &:hover {color: $color3;}
     }
   }
-  
+
   li  {
     display: inline-block;
   }
@@ -161,11 +161,11 @@ We'll place our `input` menu as a sibling to our logo `div` and navigation `ul`.
 </input>
 {% endhighlight %}
 
-In our CSS we'll set both elements to `display: none`. 
+In our CSS we'll set both elements to `display: none`.
 
 {% highlight scss %}
 #menu-toggle {display: none;}
-  
+
 .label-toggle {display: none;}
 {% endhighlight %}
 
@@ -173,7 +173,7 @@ In our CSS we'll set both elements to `display: none`.
 <figcaption>The mobile version of the menu, toggled open.</figcaption>
 
 ### Adding a Media Query and Toggled States
-We'll set our media query to target screen widths at or below 768px by nesting the following code within `@media screen and (max-width: 768px)`. We'll switch our `ul` and `li` to `display: block` so that our list items will stack vertically. We set `transition: all` for the `ul` because we'll be transitioning the `height`, `opacity`, and `visibility` properties when toggling. 
+We'll set our media query to target screen widths at or below 768px by nesting the following code within `@media screen and (max-width: 768px)`. We'll switch our `ul` and `li` to `display: block` so that our list items will stack vertically. We set `transition: all` for the `ul` because we'll be transitioning the `height`, `opacity`, and `visibility` properties when toggling.
 
 {% highlight scss %}
 ul {
@@ -197,7 +197,7 @@ li {
 }
 {% endhighlight %}
 
-Because the `display` property isn't effected by `transition`, we'll need to transition our menu using a combination of `visibility: hidden`, `height: 0`, and `opacity: 0`. In our toggled state, dicated by `#menu-toggle:checked`, we'll set the transitioned properties to the following:
+Because the `display` property isn't effected by `transition`, we'll need to transition our menu using a combination of `visibility: hidden`, `height: 0`, and `opacity: 0`. In our toggled state, dictated by `#menu-toggle:checked`, we'll set the transitioned properties to the following:
 
 {% highlight scss %}
 #menu-toggle:checked ~ ul {
@@ -207,7 +207,7 @@ Because the `display` property isn't effected by `transition`, we'll need to tra
 }
 {% endhighlight %}
 
-Now when toggling our menu, the menu container will expand and transition nicely. This menu, built on CSS alone, serves as a responsive way to serve navigation. You can also remove the desktop state to have a full-screen toggle menu at any screen width. 
+Now when toggling our menu, the menu container will expand and transition nicely. This menu, built on CSS alone, serves as a responsive way to serve navigation. You can also remove the desktop state to have a full-screen toggle menu at any screen width.
 
 ## The Finished Result
 Below you'll see the finished result, which you can fork on Codepen. *Note that in order to see the responsive aspects of the menu, you'll need to run this snippet in debug mode to access the media query breakpoint.*
