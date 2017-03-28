@@ -189,15 +189,15 @@ Note that when we clear our `input`, our computed property, `result` is also cle
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Wrap-up
-With this example we've only just scratched the surface of Vue's capabilities. Nevertheless, within this example we can start to see the simplicity of the Vue model and the ease in which we can setup reactivity between data and the DOM. I created a version of this exercise using jQuery, which illustrates a different approach to solving this exercise ([see it on codepen][3]). The Vue version of this app is much more concise and flexible.
+With this example we've only just scratched the surface of Vue's capabilities. Nevertheless, within this example we can start to see the simplicity of the Vue model and the ease in which we can setup reactivity between data and the DOM. I created a version of this exercise using jQuery, which illustrates a different approach to solving this exercise ([see it on codepen][3]{:.linkUnderline}). The Vue version of this app is much more concise and flexible.
 
-I encourage you to explore the [official Vue documentation][1], which is both comprehensive and approachable. Vue is capable of much, much more, including conditional DOM rendering, component architecture, routing, and state management. While Vue doesn't necessarily offer anything new that isn't already available with other frameworks, such as React and Angular, it is incredibly lightweight and simple.
+I encourage you to explore the [official Vue documentation][1]{:.linkUnderline}, which is both comprehensive and approachable. Vue is capable of much, much more, including conditional DOM rendering, component architecture, routing, and state management. While Vue doesn't necessarily offer anything new that isn't already available with other frameworks, such as React and Angular, it is incredibly lightweight and simple.
 
 ### Resources & Additional Reading
-- [Official Vue.js documentation][1]
-- [NATO phonetic alphabet - Wikipedia][2]
+- [Official Vue.js documentation][1]{:.linkUnderline}
+- [NATO phonetic alphabet - Wikipedia][2]{:.linkUnderline}
 
-Have feedback? Let me know; I'd be happy to hear it. [hello@christopherianmurphy.com](mailto:hello@christopherianmurphy.com)
+Have feedback? Let me know; I'd be happy to hear it. [hello@christopherianmurphy.com](mailto:hello@christopherianmurphy.com){:.linkUnderline}
 
 [1]: https://vuejs.org/ "Official Vue.js documentation"
 [2]: https://en.wikipedia.org/wiki/NATO_phonetic_alphabet "NATO phonetic alphabet - Wikipedia"
