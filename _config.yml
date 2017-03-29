@@ -25,3 +25,4 @@ permalink: /:year/:month/:title.html
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
