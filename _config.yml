@@ -15,6 +15,13 @@ kramdown:
     auto_ids: false
 gems:
 - jekyll-paginate
+# - octopress-minify-html
+- jekyll-minifier
+- jekyll-sitemap
+- emoji_for_jekyll
 paginate: 6
 paginate_path: 'blog/page:num'
 permalink: /:year/:month/:title.html
+exclude:
+  - Gemfile
+  - Gemfile.lock

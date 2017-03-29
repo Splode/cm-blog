@@ -12,3 +12,6 @@ categories: Vue.js JavaScript front-end
 
 ## Boom
 Terrible Ferret
+
+hello there pal, :purple_heart: ok how about that!?
+thingy :wink:
