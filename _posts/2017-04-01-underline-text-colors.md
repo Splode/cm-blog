@@ -5,15 +5,15 @@ tagline: "A CSS snippet for independently styling text and underline color."
 date: 2017-04-01
 author: Christopher Murphy
 description: A CSS snippet for independently styling text and underline color.
-excerpt_separator: <!--more-->
+excerpt: If you've ever wanted to set the color of the underline for underlined text separately from the text color, you may have come across the CSS property `text-decoration-color`. Unfortunately, this property is not yet fully supported by all browser vendors.
 image: assets/images/posts/004_underline_color/underline_color.png
-categories: CSS typography snippet
+categories: CSS snippet typography
 ---
 
 ![Styling Underline Color]({{ site.baseurl }}/assets/images/posts/004_underline_color/underline_color.png)
 
 ## Styling Underline Color
-If you've ever wanted to set the color of the underline for underlined text separately from the text color, you may have come across the CSS property `text-decoration-color`. Unfortunately, this property is not yet fully supported by all browser vendors. <!--more--> At the time of this article being written, only Chrome and Opera fully support the property<sup>[1][1]</sup>. Fortunately, there's a quick and easy work-around that involves wrapping the underlined content in a `span`.
+If you've ever wanted to set the color of the underline for underlined text separately from the text color, you may have come across the CSS property `text-decoration-color`. Unfortunately, this property is not yet fully supported by all browser vendors. At the time of this article being written, only Chrome and Opera fully support the property<sup>[1][1]</sup>. Fortunately, there's a quick and easy work-around that involves wrapping the underlined content in a `span`.
 
 Here's a simple snippet for independently styling text and underline color. Note that the color property of the `span` element controls the color of the text — in this case the `h1` element — while the `h1` element's `color` property styles the underline color.
 
