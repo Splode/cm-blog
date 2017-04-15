@@ -18,6 +18,15 @@ categories: JavaScript Vue.js
 ## Vue.js
 Vue.js is a progressive and reactive JavaScript framework for building front-end interfaces. It's dead-simple and allows for lightning-fast DOM manipulation through a virtual DOM. It's flexible enough to use in simple, static pages, and powerful enough to use in complex applications as well.
 
+### Installing Vue
+The simplest way to install Vue.js is by linking to the CDN. Note: place your script tag at the end of the `<body>` tag.
+
+{% highlight html %}
+<script src="https://unpkg.com/vue"></script>
+{% endhighlight %}
+
+You can also install Vue via the Node Package Manager, or use the powerful Vue CLI. 
+
 ## What We'll be making - Whiskey Tango Foxtrot
 The NATO phonetic alphabet is a radiotelephonic alphabet used by NATO members. In other words, it's a method used by radio operators to spell words and pronounce letters clearly by using a proxy alphabet. "Cat", for example, would be transmitted as "Charlie, Alpha, Tango." You might recall hearing this system used in just about any action movie that features the U.S. military.
 

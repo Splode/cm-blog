@@ -14,7 +14,11 @@ categories: animations CSS JavaScript Vue.js
 
 Vue.js (Vue) offers a simple way to transition between elements on the page, allowing for either simple transitions between CSS properties or complex animations (or both!). In this example I'll demonstrate the basics of Vue transitions by creating a menu-expand toggle button. You can see a demonstration in the preview animation above.
 
-## Setup & Material Icons
+## Setup
+### Installing Vue.js
+Installing Vue is as simple as linking to it via a CDN. You can read more about installation options and how to install in the post [Intro to Vue.js]({% post_url 2017-03-26-intro-to-vuejs-nato-converter %}){:.linkUnderline}
+
+### Material Icons
 For this example I'll be using [Google's Material Icon][1]{:.linkUnderline} set, an open-source and robust library of 900+ scalable icons. Although I'll be using Material icons, this example could quickly and easily be adapted to fit a wide variety of element types. Adding the icons is quite simple — we'll just import them to our CSS:
 
 {% highlight scss %}
