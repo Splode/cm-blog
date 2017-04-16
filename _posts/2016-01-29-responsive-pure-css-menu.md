@@ -6,7 +6,7 @@ date: 2016-01-23
 author: Christopher Murphy
 description: This resource is a responsive menu based on CSS using flexbox. It relies upon a checkbox input to toggle between states and can therefore be used as an alternative to JavaScript-based solutions.
 excerpt: This resource is a responsive menu based on CSS using flexbox. It relies upon a checkbox input to toggle between states and can therefore be used as an alternative to JavaScript-based solutions.
-image: assets/images/posts/001_cssMenu/cssMenu.gif
+image: /assets/images/posts/001_cssMenu/cssMenu.gif
 categories: CSS navigation responsive
 ---
 
