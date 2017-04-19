@@ -15,4 +15,4 @@ categories: animations CSS snippet typography
 If you've ever tried to animate font-size with CSS, you'll notice that the transitioning between font sizes happens in a herky-jerky manner. Not smooth at all. See the example below for a demonstration.
 
 ### The Solution - Animating Scale
-In order to 
+In order to smoothly animate the size of our text, we'll transition the *scale* of our text using `transform: scale()`.
