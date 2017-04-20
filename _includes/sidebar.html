@@ -3,7 +3,7 @@
 <aside>
   <h3>Recent Posts</h3>
   <ul class="recent">
-    {% for post in site.posts limit: 10 %}
+    {% for post in site.posts limit: 7 %}
     <li>
       <h4><a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}" class="linkUnderline">{{ post.title }}</a></h4>
       <time itemprop="dateCreated" datetime="{{post.date}}">{{post.date | date:"%B %-d, %Y"}}</time>

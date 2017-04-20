@@ -19,7 +19,7 @@ gems:
 - jekyll-minifier
 - jekyll-sitemap
 - emoji_for_jekyll
-paginate: 6
+paginate: 7
 paginate_path: 'blog/page:num'
 permalink: /:year/:month/:title.html
 exclude:
