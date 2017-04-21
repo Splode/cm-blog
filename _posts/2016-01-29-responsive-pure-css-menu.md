@@ -32,9 +32,9 @@ A simple header with a heading and some filler text will give our page some cont
 	<nav class="wrapper">
 		<div class="logo"></div>
 		<ul>
-			<a href="#"><li>Lorem</li></a>
-			<a href="#"><li>Ipsum</li></a>
-			<a href="#"><li>Serum</li></a>
+			<li><a href="#">Lorem</a></li>
+			<li><a href="#">Ipsum</a></li>
+			<li><a href="#">Serum</a></li>
 		</ul>
 	</nav>
 </nav>
@@ -176,6 +176,14 @@ In our CSS we'll set both elements to `display: none`.
 We'll set our media query to target screen widths at or below 768px by nesting the following code within `@media screen and (max-width: 768px)`. We'll switch our `ul` and `li` to `display: block` so that our list items will stack vertically. We set `transition: all` for the `ul` because we'll be transitioning the `height`, `opacity`, and `visibility` properties when toggling.
 
 {% highlight scss %}
+nav {
+      ul {
+        a {
+          color: $color2;
+        }
+      }
+    }
+		
 ul {
   background-color: $color1;
   display: block;
