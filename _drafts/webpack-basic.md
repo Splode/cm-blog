@@ -123,6 +123,9 @@ Now, instead of typing `webpack index.js ./dist/bundle.js` into our console ever
 webpack
 {% endhighlight %}
 
+### Babel Loader
+To use ES2015 syntax, we'll need to transpile our code using Babel. We'll start by installing `babel` and `babel-core`
+
 [1]: https://nodejs.org/docs/latest/api/path.html "Official Node Path Documentation"
 [2]: https://webpack.js.org/configuration/ "Official Webpack Configuration Documentation"
 [3]: https://babeljs.io/ "Babel"
