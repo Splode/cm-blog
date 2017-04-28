@@ -1,19 +1,21 @@
 ---
 layout: post
-title: "Up & Running Quickly with Webpack & ES2015"
-tagline: "Bundle project assets with Webpack and leverage ES2015 syntax with Babel."
+title: "Up & Running Quickly with Webpack"
+tagline: "Bundle project assets and easily manage dependencies with Webpack."
 date: 2017-04-23
 author: Christopher Murphy
-description: A tutorial for setting up a basic workflow with Webpack and Babel. Webpack allows you to bundle project assets and modules efficiently. Babel allows you to use ES2015 syntax by transpiling
-excerpt:
+description: A tutorial for setting up a basic workflow with Webpack. Webpack allows you to bundle project assets and modules efficiently and is an incredibly valuable tool in the front-end development workflow.
+excerpt: 'Module bundlers, like Webpack and Browserify, have become a ubiquitous part of the front-end development workflows. Module bundlers allow us separate program functionality into distinct parts to be recombined into a single unit at production time. Separating programs into distinct, functional chunks greatly increases the maintainability of code, as it forms a clear delineation between the various working components within a project.'
 image: /assets/images/posts/009_webpack-basic/009_webpack-basic.png
-categories: ES2015 JavaScript npm tooling Webpack
+categories: JavaScript npm tooling Webpack
 ---
 
 ![Webpack]({{ site.url }}/assets/images/posts/009_webpack-basic/009_webpack-basic.png)
 
-## Webpack — What is it?
-Module bundlers, like Webpack and Browserify, have become
+## Webpack — What is it and Why Would you Use it??
+Module bundlers, like Webpack and Browserify, have become a ubiquitous part of the front-end development workflows. Module bundlers allow us separate program functionality into distinct parts to be recombined into a single unit at production time. Separating programs into distinct, functional chunks greatly increases the maintainability of code, as it forms a clear delineation between the various working components within a project.
+
+Consider the following example, wherein we make use of several disparate scripts within a single page. For each script, we must link to a separate file, which in this example is relatively simple, but you might easily imagine an example of a complex project that requires several scripts. Each time we link to a `<script>`, the browser must make a request, which increases load-time.
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -31,8 +33,23 @@ Module bundlers, like Webpack and Browserify, have become
 </html>
 {% endhighlight %}
 
+After bundling our scripts together, we can reference a single `<script>`. Additionally, this bundled file will be minified.
+
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Webpack Test Project</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="bundle.js"></script>
+  </body>
+</html>
+{% endhighlight %}
+
 ## Installing Webpack
-Installing Webpack is quite simple, especially if you're familiar with installing modules with npm. If you haven't used npm, then you'll f
+Installing Webpack is quite simple, especially if you're familiar with installing modules with npm. If you haven't used npm, then I suggest that you first researching a typical workflow with with npm. A good place to start is the [npm official documentation][3]{:.linkUnderline}.
 
 {% highlight bash %}
 mkdir webpack-test-project
@@ -96,7 +113,6 @@ webpack index.js ./dist/bundle.js
 With that command executed, we should now have a single script file containing our app logic and included modules. In this case we're only including a single module, but you could probably see how this workflow is incredibly handy for dealing with large and complex projects with several dependencies.
 
 ## Webpack Config
-### Efficient Bundling
 At this point our bundling with webpack works just fine, except that having to specify both the entry point and destination for our scripts every time we'd like to build is cumbersome and increases the possibility of inconsistencies. We also need to include Babel so that we can transpile some ES2015 syntax. We can accomplish both of these things by using a webpack configuration file:
 
 {% highlight bash %}
@@ -123,9 +139,11 @@ Now, instead of typing `webpack index.js ./dist/bundle.js` into our console ever
 webpack
 {% endhighlight %}
 
-### Babel Loader
-To use ES2015 syntax, we'll need to transpile our code using Babel. We'll start by installing `babel` and `babel-core`
+## Wrap-up
+### Resources and Additional Reading
+- [Official Node Path Documentation][1]{:.linkUnderline}
+- [Official Webpack Configuration Documentation][2]{:.linkUnderline}
 
 [1]: https://nodejs.org/docs/latest/api/path.html "Official Node Path Documentation"
 [2]: https://webpack.js.org/configuration/ "Official Webpack Configuration Documentation"
-[3]: https://babeljs.io/ "Babel"
+[3]: https://docs.npmjs.com/getting-started/what-is-npm "npm Getting Started"
