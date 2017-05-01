@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "Up & Running Quickly with Webpack"
-tagline: "Bundle project assets and easily manage dependencies with Webpack."
-date: 2017-04-23
+title: "Up & Running Quickly with webpack"
+tagline: "Bundle project assets and easily manage dependencies with webpack."
+date: 2017-04-30
 author: Christopher Murphy
-description: A tutorial for setting up a basic workflow with Webpack. Webpack allows you to bundle project assets and modules efficiently and is an incredibly valuable tool in the front-end development workflow.
-excerpt: 'Module bundlers, like Webpack and Browserify, have become a ubiquitous part of the front-end development workflows. Module bundlers allow us separate program functionality into distinct parts to be recombined into a single unit at production time. Separating programs into distinct, functional chunks greatly increases the maintainability of code, as it forms a clear delineation between the various working components within a project.'
+description: A tutorial for setting up a basic workflow with webpack. webpack allows you to bundle project assets and modules efficiently and is an incredibly valuable tool in the front-end development workflow.
+excerpt: 'Module bundlers, like webpack and Browserify, have become a ubiquitous part of the front-end development workflows. Module bundlers allow us separate program functionality into distinct parts to be recombined into a single unit at production time. Separating programs into distinct, functional chunks greatly increases the maintainability of code, as it forms a clear delineation between the various working components within a project.'
 image: /assets/images/posts/009_webpack-basic/009_webpack-basic.png
-categories: JavaScript npm tooling Webpack
+categories: JavaScript npm tooling webpack
 ---
 
-![Webpack]({{ site.url }}/assets/images/posts/009_webpack-basic/009_webpack-basic.png)
+![webpack]({{ site.url }}/assets/images/posts/009_webpack-basic/009_webpack-basic.png)
 
-## Webpack — What is it and Why Would you Use it??
-Module bundlers, like Webpack and Browserify, have become a ubiquitous part of the front-end development workflows. Module bundlers allow us separate program functionality into distinct parts to be recombined into a single unit at production time. Separating programs into distinct, functional chunks greatly increases the maintainability of code, as it forms a clear delineation between the various working components within a project.
+## webpack — What is it and Why Would you Use it??
+Module bundlers, like webpack and Browserify, have become a ubiquitous part of the front-end development workflow. Module bundlers allow us separate program functionality into distinct parts to be recombined into a single unit at production time. Separating programs into distinct, functional chunks greatly increases the maintainability of code, as it forms a clear delineation between the various working components within a project.
 
 Consider the following example, wherein we make use of several disparate scripts within a single page. For each script, we must link to a separate file, which in this example is relatively simple, but you might easily imagine an example of a complex project that requires several scripts. Each time we link to a `<script>`, the browser must make a request, which increases load-time.
 
@@ -22,7 +22,7 @@ Consider the following example, wherein we make use of several disparate scripts
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Webpack Test Project</title>
+    <title>webpack Test Project</title>
   </head>
   <body>
     <script type="text/javascript" src="script-1.js"></script>
@@ -40,7 +40,7 @@ After bundling our scripts together, we can reference a single `<script>`. Addit
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Webpack Test Project</title>
+    <title>webpack Test Project</title>
   </head>
   <body>
     <script type="text/javascript" src="bundle.js"></script>
@@ -48,8 +48,8 @@ After bundling our scripts together, we can reference a single `<script>`. Addit
 </html>
 {% endhighlight %}
 
-## Installing Webpack
-Installing Webpack is quite simple, especially if you're familiar with installing modules with npm. If you haven't used npm, then I suggest that you first researching a typical workflow with with npm. A good place to start is the [npm official documentation][3]{:.linkUnderline}.
+## Installing webpack
+Installing webpack is quite simple, especially if you're familiar with installing modules with npm. If you haven't used npm, then I suggest first researching a typical workflow with with npm. A good place to start is the [npm official documentation][3]{:.linkUnderline}.
 
 {% highlight bash %}
 mkdir webpack-test-project
@@ -67,7 +67,7 @@ npm install webpack --save-dev
 
 ## Basic Bundling
 ### Module Includes
-With webpack installed, we can use it to bundle our assets and modules together. We'll create a `index.js` file from which we'll include our modules and write some of our app logic.
+With webpack installed, we can use it to bundle our assets and modules together. We'll create an `index.js` file from which we'll include our modules and write some of our app logic.
 
 {% highlight bash %}
 touch index.js
@@ -94,7 +94,7 @@ Next, we'll create an `index.html` as the entry point for our project and refere
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Webpack Test Project</title>
+    <title>webpack Test Project</title>
   </head>
   <body>
     <div id="hw"></div>
@@ -104,7 +104,7 @@ Next, we'll create an `index.html` as the entry point for our project and refere
 {% endhighlight %}
 
 ### Bundle!
-To bundle our `index.js` file with jQuery, we'll run the `webpack` command followed by our entry point, `index.js`, and specify the name and location of our webpack-generated bundle, `./dist/bundle.js`.
+To bundle our `index.js` file with jQuery, we'll run the `webpack` command followed by our entry point, `index.js`, and specify the name and location of our webpack-generated bundle, `./dist/bundle.js`. The `dist` directory and `bundle.js` will be generated by webpack.
 
 {% highlight bash %}
 webpack index.js ./dist/bundle.js
@@ -112,14 +112,14 @@ webpack index.js ./dist/bundle.js
 
 With that command executed, we should now have a single script file containing our app logic and included modules. In this case we're only including a single module, but you could probably see how this workflow is incredibly handy for dealing with large and complex projects with several dependencies.
 
-## Webpack Config
-At this point our bundling with webpack works just fine, except that having to specify both the entry point and destination for our scripts every time we'd like to build is cumbersome and increases the possibility of inconsistencies. We also need to include Babel so that we can transpile some ES2015 syntax. We can accomplish both of these things by using a webpack configuration file:
+## webpack Config
+At this point our bundling with webpack works just fine, except that having to specify both the entry point and destination for our scripts every time we'd like to build is cumbersome and increases the possibility of inconsistencies. We can streamline this process by using a webpack configuration file:
 
 {% highlight bash %}
 touch webpack.config.js
 {% endhighlight %}
 
-Within our `webpack.config.js` file, we'll `require` the `path` module, a node module that comes simplifies working with file paths. Webpack expects a configuration object, in which we can specify the entry point for our scripts and the location for our bundled output.
+Within our `webpack.config.js` file, we'll `require` the `path` module, a module that ships with node and which simplifies working with file paths. webpack expects a configuration object, in which we can specify the entry point for our scripts and the location for our bundled output.
 
 {% highlight javascript %}
 var path = require('path');
@@ -140,10 +140,11 @@ webpack
 {% endhighlight %}
 
 ## Wrap-up
+Bundling with webpack is really just the tip of the webpack iceberg. Webpack can do a surprising number of useful things, and while it has a relatively steep learning curve, it is quite powerful. I've been using it regularly in my workflow as it comes preconfigured with Vue-CLI, but because it comes preconfigured, I wasn't familiar with its fundamental workings. This exercise was an attempt to disassemble and recreate the incredibly useful black box that is webpack.
 ### Resources and Additional Reading
 - [Official Node Path Documentation][1]{:.linkUnderline}
-- [Official Webpack Configuration Documentation][2]{:.linkUnderline}
+- [Official webpack Configuration Documentation][2]{:.linkUnderline}
 
 [1]: https://nodejs.org/docs/latest/api/path.html "Official Node Path Documentation"
-[2]: https://webpack.js.org/configuration/ "Official Webpack Configuration Documentation"
+[2]: https://webpack.js.org/configuration/ "Official webpack Configuration Documentation"
 [3]: https://docs.npmjs.com/getting-started/what-is-npm "npm Getting Started"
