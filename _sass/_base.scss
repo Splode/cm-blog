@@ -11,11 +11,13 @@ a {
 
 body {
 	background-color: $white;
-	text-rendering: optimizeLegibility;
+	color: $plumMeat;
+	display: flex;
+	flex-direction: column;
 	font-family: $bodyFont;
 	font-size: 18px;
-	color: $plumMeat;
 	margin: 0 auto;
+	text-rendering: optimizeLegibility;
 }
 
 blockquote {

@@ -1,350 +1,376 @@
 article {
-    margin-top: 3em;
-    width: $widthMain;
+  //margin-top: 3em;
+  //width: $widthMain;
 
-    a {
-        color: $brightPurple;
-        position: relative;
+  a {
+    color: $brightPurple;
+    position: relative;
 
-        &:hover {
-            color: $plumMeat;
-        }
+    &:hover {
+      color: $plumMeat;
     }
+  }
 
-    footer {
-        border-top: 2px solid $brightPurple;
-        //padding-bottom: 3em;
-        padding-top: 1em;
-        margin-top: 2em;
-
-        p {
-            display: inline;
-        }
-
-        time {
-            font-size: 1em;
-        }
-        @media only screen and (max-width: $tablet) {
-            border-bottom: 2px solid $brightPurple;
-        }
-    }
-
-    h2 {
-        margin: 1em 0 0.5em;
-    }
-
-    h2:first-child {
-        margin-top: 0;
-    }
-
-    h3 {
-        color: $plumMeat;
-        margin: 0 0 0.5em;
-    }
-
-    img {
-        height: auto;
-        width: 100%;
-    }
+  footer {
+    border-top: 2px solid $brightPurple;
+    //padding-bottom: 3em;
+    padding-top: 1em;
+    margin-top: 2em;
 
     p {
-        margin: 0 0 1em;
-    }
-    @media only screen and (max-width: $tablet) {
-        width: 100%;
-    }
-}
-
-article.preview {
-    margin-top: 6em;
-
-    a {
-        color: $brightPurple;
-        font-weight: bold;
-    }
-
-    h2 {
-        font-size: 1.75em;
-        margin: 1em 0 0.5em;
-    }
-
-    p {
-        margin-bottom: 0.5em;
-        margin-top: 0;
+      display: inline;
     }
 
     time {
-        display: inline-block;
-        padding-bottom: 1em;
+      font-size: 1em;
     }
+    @media only screen and (max-width: $tablet) {
+      border-bottom: 2px solid $brightPurple;
+    }
+  }
 
-    .tagline {
-        font-size: 1.2em;
-        font-weight: bold;
-    }
+  h2 {
+    margin: 1em 0 0.5em;
+  }
+
+  h2:first-child {
+    margin-top: 0;
+  }
+
+  h3 {
+    color: $plumMeat;
+    margin: 0 0 0.5em;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  p {
+    margin: 0 0 1em;
+  }
+  @media only screen and (max-width: $tablet) {
+    width: 100%;
+  }
+}
+
+article.preview {
+  margin-bottom: 6em;
+
+  a {
+    color: $brightPurple;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.75em;
+    margin: 1em 0 0.5em;
+  }
+
+  p {
+    margin-bottom: 0.5em;
+    margin-top: 0;
+  }
+
+  time {
+    display: inline-block;
+    padding-bottom: 1em;
+  }
+
+  .tagline {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 aside {
-    float: right;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 20%;
+  //float: right;
+  //position: absolute;
+  //right: 0;
+  //top: 0;
+  width: 20%;
 
-    h3 {
-        margin-top: 0;
-    }
-    @media only screen and (max-width: $tablet) {
-        padding-top: 2em;
-        position: inherit;
-        text-align: center;
-        width: 100%;
-    }
+  h3 {
+    margin-top: 0;
+  }
+  @media only screen and (max-width: $tablet) {
+    padding-top: 2em;
+    position: inherit;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
-    background-color: $plum;
-    border-bottom: 2px solid $brightPurple;
-    height: 75px;
-    min-width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
+  background-color: $plum;
+  border-bottom: 2px solid $brightPurple;
+  height: 75px;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-        padding: 25px 2.5%;
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px 2.5%;
+  }
+
+  li,
+  ul {
+    color: $white;
+    display: inline-block;
+    font-family: $headFont;
+    list-style-type: none;
+    margin: 0;
+    text-align: right;
+  }
+
+  li {
+    padding-right: 2em;
+  }
+
+  li:last-of-type {
+    padding-right: 0;
+  }
+
+  .logo {
+    margin-top: -5px;
+  }
+
+  .logo svg {
+    height: 35px;
+  }
+
+  .logo a svg .st0 {
+    transition: fill 0.25s ease-in-out;
+  }
+  @media only screen and (min-width: $desktop) {
+    .logo a svg:hover .st0 {
+      fill: #fff;
+    }
+  }
+  @media only screen and (max-width: $tablet) {
+    ul {
+      background-color: $plum;
+      display: none;
+      height: 100vh;
+      left: 0;
+      margin-top: 75px;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
     }
 
-    li,
-    ul {
-        color: $white;
-        display: inline-block;
-        font-family: $headFont;
-        list-style-type: none;
-        margin: 0;
-        text-align: right;
+    ul a {
+      padding: 1em 4em;
     }
 
     li {
-        padding-right: 2em;
+      border-bottom: 2px solid $brightPurple;
+      font-size: 1.5em;
+      padding: 1.25em 0;
+      text-align: center;
+      width: 100%;
     }
 
     li:last-of-type {
-        padding-right: 0;
+      border-bottom: none;
     }
 
     .logo {
-        margin-top: -5px;
+      float: left;
     }
 
-    .logo svg {
-        height: 35px;
+    .wrapper {
+      display: block;
     }
-
-    .logo a svg .st0 {
-        transition: fill 0.25s ease-in-out;
-    }
-    @media only screen and (min-width: $desktop) {
-        .logo a svg:hover .st0 {
-            fill: #fff;
-        }
-    }
-    @media only screen and (max-width: $tablet) {
-        ul {
-            background-color: $plum;
-            display: none;
-            height: 100vh;
-            left: 0;
-            margin-top: 75px;
-            padding: 0;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: -1;
-        }
-
-        ul a {
-            padding: 1em 4em;
-        }
-
-        li {
-            border-bottom: 2px solid $brightPurple;
-            font-size: 1.5em;
-            padding: 1.25em 0;
-            text-align: center;
-            width: 100%;
-        }
-
-        li:last-of-type {
-            border-bottom: none;
-        }
-
-        .logo {
-            float: left;
-        }
-
-        .wrapper {
-            display: block;
-        }
-    }
+  }
 }
 
 .archive {
-    h4 {
-        color: $plumMeat;
-        display: inline;
-    }
+  h4 {
+    color: $plumMeat;
+    display: inline;
+  }
 
-    a {
-        color: inherit;
-    }
-    @media only screen and (max-width: $tablet) {
-        border-bottom: 2px solid $brightPurple;
-        margin-bottom: 2em;
-    }
+  a {
+    color: inherit;
+  }
+  @media only screen and (max-width: $tablet) {
+    border-bottom: 2px solid $brightPurple;
+    margin-bottom: 2em;
+  }
 }
 
 .button {
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    color: $plumMeat;
-    display: inline-block;
-    padding: 0.5em 1em;
-    transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  color: $plumMeat;
+  display: inline-block;
+  padding: 0.5em 1em;
+  transition: all 0.3s ease-in-out;
 
-    &:active,
-    &:focus,
-    &:hover {
-        background-color: $brightPurple;
-        color: $white;
-    }
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $brightPurple;
+    color: $white;
+  }
 }
 
 // jekyll_emoji plugin
 .emoji {
-    height: 1em;
-    width: auto;
+  height: 1em;
+  width: auto;
 }
 
 .footer {
-    background-color: $plum;
-    clear: both;
-    min-width: 100%;
-    padding: 2em 0;
-    text-align: center;
+  background-color: $plum;
+  clear: both;
+  min-width: 100%;
+  padding: 2em 0;
+  text-align: center;
 
-    p {
-        font-size: 0.85em;
-        margin: 0;
-    }
+  p {
+    font-size: 0.85em;
+    margin: 0;
+  }
+}
+
+.article-container {
+  width: $widthMain;
+
+  @media only screen and (max-width: $tablet) {
+    width: 100%;
+  }
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column;
+  }
 }
 
 .masthead {
-    background-color: $plum;
-    min-width: 100%;
+  background-color: $plum;
+  min-width: 100%;
 
-    h1 {
-        color: $white;
-        font-size: 2.75em;
-        padding-top: 3em;
-    }
+  h1 {
+    color: $white;
+    font-size: 2.75em;
+    padding-top: 3em;
+  }
 
-    p {
-        color: $brightPurple;
-        font-size: 1.33em;
-        margin-top: 0;
-        padding-bottom: 4em;
-    }
+  p {
+    color: $brightPurple;
+    font-size: 1.33em;
+    margin-top: 0;
+    padding-bottom: 4em;
+  }
 
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 6em;
-    }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6em;
+  }
 }
 
 .masthead--post {
-    background-color: $white;
+  background-color: $white;
 
-    h1 {
-        color: $plum;
-    }
+  h1 {
+    color: $plum;
+  }
 
-    p {
-        color: $plumMeat;
-        padding-bottom: 1em;
-    }
+  p {
+    color: $plumMeat;
+    padding-bottom: 1em;
+  }
 
-    .wrapper {
-        border-bottom: 2px solid $brightPurple;
-        margin-bottom: 2em;
-    }
+  .wrapper {
+    border-bottom: 2px solid $brightPurple;
+    margin-bottom: 2em;
+  }
 }
 
 .menu-icon {
-    background: url("../assets/images/hamburger.svg") no-repeat;
-    background-position: top right;
-    background-size: 50%;
-    display: none;
-    float: right;
-    height: 60px;
-    width: 60px;
-    @media only screen and (max-width: $tablet) {
-        display: block;
-    }
+  background: url("../assets/images/hamburger.svg") no-repeat;
+  background-position: top right;
+  background-size: 50%;
+  display: none;
+  float: right;
+  height: 60px;
+  width: 60px;
+  @media only screen and (max-width: $tablet) {
+    display: block;
+  }
 }
 
 .paginator {
-    border-top: 2px solid $brightPurple;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2em;
-    width: $widthMain;
+  border-top: 2px solid $brightPurple;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+  width: $widthMain;
 
-    a {
-        color: $brightPurple;
-        font-weight: bold;
-    }
-    @media only screen and (max-width: $tablet) {
-        width: 100%;
-    }
+  a {
+    color: $brightPurple;
+    font-weight: bold;
+  }
+  @media only screen and (max-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .recent {
+  padding: 0;
+
+  h4 {
+    color: $plumMeat;
+    margin: 0;
     padding: 0;
+  }
 
-    h4 {
-        color: $plumMeat;
-        margin: 0;
-        padding: 0;
-    }
-
-    time {
-        display: inline-block;
-        font-size: 0.85em;
-        margin: 0 0 1em;
-        padding: 0;
-    }
+  time {
+    display: inline-block;
+    font-size: 0.85em;
+    margin: 0 0 1em;
+    padding: 0;
+  }
 }
 
 .tags {
-    color: $plumMeat;
-    font-size: 0.85em;
-    margin-bottom: 3em;
-    padding: 0;
+  color: $plumMeat;
+  font-size: 0.85em;
+  margin-bottom: 3em;
+  padding: 0;
 
-    li {
-        background-color: $grey;
-        display: inline-block;
-        //padding: .5em;
-        margin-bottom: 0.5em;
-    }
+  li {
+    background-color: $grey;
+    display: inline-block;
+    //padding: .5em;
+    margin-bottom: 0.5em;
+  }
 }
 
 .wrapper {
-    margin: 0 auto;
-    max-width: 1080px;
-    padding: 0 2.5%;
-    position: relative;
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 0 2.5%;
 }
