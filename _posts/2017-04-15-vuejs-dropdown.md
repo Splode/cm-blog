@@ -10,8 +10,6 @@ image: /assets/images/posts/006_vue_drop-down/006_vue_drop-down.gif
 categories: JavaScript Vue.js navigation
 ---
 
-![Drop-down menu made with Vue.js]({{ site.baseurl }}/assets/images/posts/006_vue_drop-down/006_vue_drop-down.gif)
-
 ## What we'll be making
 In this tutorial we're going to make a flexible and lightweight drop-down menu using a little bit of Vue.js. Our menu will be animated using Vue transitions and some simple CSS. In the end, we'll have a simple drop-down menu that can be adapted to a wide variety of layouts and styles, and can easily be customized with your own animations and transitions.
 

@@ -3,6 +3,9 @@ layout: default
 page-type: post
 ---
 <article>
+  {% if page.image %}
+  <img src="{{ page.image }}" alt="{{ page.description }}" title="{{ page.title }}">
+  {% endif %}
   {{content}}
   <footer>
 

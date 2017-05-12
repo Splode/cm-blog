@@ -10,8 +10,6 @@ image: /assets/images/posts/008_glowing-button/008_glowing-button.png
 categories: animation CSS snippet UI/UX
 ---
 
-![Glowing Button]({{ site.baseurl }}/assets/images/posts/008_glowing-button/008_glowing-button.png)
-
 ## Glowing Button, Just for Kicks
 I got a wild hair the other day to make a glowing button. The basic idea was simple and straightforward: create a button that has a glowing look, as it were phosphorescent or radioactive, and that glows even more fervently when hovered. So, let's make it!
 

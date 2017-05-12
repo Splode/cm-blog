@@ -10,8 +10,6 @@ image: /assets/images/posts/009_webpack-basic/009_webpack-basic.png
 categories: JavaScript npm tooling webpack
 ---
 
-![webpack]({{ site.url }}/assets/images/posts/009_webpack-basic/009_webpack-basic.png)
-
 ## webpack — What is it and Why Would you Use it??
 Module bundlers, like webpack and Browserify, have become a ubiquitous part of the front-end development workflow. Module bundlers allow us separate program functionality into distinct parts to be recombined into a single unit at production time. Separating programs into distinct, functional chunks greatly increases the maintainability of code, as it forms a clear delineation between the various working components within a project.
 

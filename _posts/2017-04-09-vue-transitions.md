@@ -10,8 +10,6 @@ image: /assets/images/posts/005_icon_transitions/005_icon_transitions.gif
 categories: animation CSS JavaScript Vue.js
 ---
 
-![Styling Underline Color]({{ site.baseurl }}/assets/images/posts/005_icon_transitions/005_icon_transitions.gif)
-
 Vue.js (Vue) offers a simple way to transition between elements on the page, allowing for either simple transitions between CSS properties or complex animations (or both!). In this example I'll demonstrate the basics of Vue transitions by creating a menu-expand toggle button. You can see a demonstration in the preview animation above.
 
 ## Setup

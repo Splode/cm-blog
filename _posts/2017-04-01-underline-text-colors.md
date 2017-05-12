@@ -10,8 +10,6 @@ image: /assets/images/posts/004_underline_color/underline_color.png
 categories: CSS snippet typography
 ---
 
-![Styling Underline Color]({{ site.baseurl }}/assets/images/posts/004_underline_color/underline_color.png)
-
 ## Styling Underline Color
 If you've ever wanted to set the color of the underline for underlined text separately from the text color, you may have come across the CSS property `text-decoration-color`. Unfortunately, this property is not yet fully supported by all browser vendors. At the time of this article being written, only Chrome and Opera fully support the property<sup>[1][1]</sup>. Fortunately, there's a quick and easy work-around that involves wrapping the underlined content in a `span`.
 

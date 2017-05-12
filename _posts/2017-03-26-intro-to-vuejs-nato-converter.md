@@ -13,8 +13,6 @@ categories: JavaScript Vue.js
 {% assign input = '{{ input }}' %}
 {% assign result = '{{ result }}' %}
 
-![Vue.js]({{ site.baseurl }}/assets/images/posts/003_vueNato/vue.png)
-
 ## Vue.js
 Vue.js is a progressive and reactive JavaScript framework for building front-end interfaces. It's dead-simple and allows for lightning-fast DOM manipulation through a virtual DOM. It's flexible enough to use in simple, static pages, and powerful enough to use in complex applications as well.
 

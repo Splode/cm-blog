@@ -9,12 +9,10 @@ excerpt: This resource is a responsive menu based on CSS using flexbox. It relie
 image: /assets/images/posts/001_cssMenu/cssMenu.gif
 categories: CSS navigation responsive
 ---
+<!-- <figcaption>A fully responsive menu on mobile devices using CSS.</figcaption> -->
 
 ## What We'll be Making
 This resource is a responsive menu based on CSS using flexbox. It relies upon a checkbox input to toggle between states and can therefore be used as an alternative to JavaScript-based solutions. For desktop-sized displays, the menu will display as a list of text links, while on mobile devices, the menu will display as an icon that toggles the display of text links.
-
-![Pure CSS Responsive Menu]({{ site.baseurl }}/assets/images/posts/001_cssMenu/cssMenu.gif "Pure CSS Responsive Menu")
-<figcaption>A fully responsive menu on mobile devices using CSS.</figcaption>
 
 ## Creating the Structure
 
@@ -183,7 +181,7 @@ nav {
         }
       }
     }
-		
+
 ul {
   background-color: $color1;
   display: block;
