@@ -1,0 +1,16 @@
+---
+---
+var posts = [
+  {% for post in site.posts %}
+    {
+      "title": "{{ post.title }}",
+      "url": "{{ site.baseurl }}{{ post.url }}",
+      "date": "{{ post.date | date:"%B %-d, %Y" }}",
+      "tags": [
+        {% for tag in post.categories  %}
+          "{{ tag }}",
+        {% endfor %}
+      ]
+    },
+  {% endfor %}
+]
