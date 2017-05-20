@@ -5,10 +5,7 @@
         <!-- <a href="#top"><img src="00_assets/01_logos/2015_001_solid_purple.svg" width="auto" height="35px"></a> -->
         <a href="{{site.baseurl}}/" title="Blog Home"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="-378 163.6 203 234.4" style="enable-background:new -378 163.6 203 234.4;" xml:space="preserve">
-          <style type="text/css">
-          .st0{fill:#6B59EF;}
-          .st1{fill:none;}
-          </style>
+
           <g id="XMLID_1_">
             <polygon id="XMLID_2_" class="st0" points="-378,339.4 -344.1,358.9 -310.3,339.4 -310.3,300.4 -344.1,280.8 -378,300.4 	"/>
             <polygon id="XMLID_3_" class="st0" points="-344,320 -310.3,300.4 -310.3,261.3 -344.1,241.8 -378,261.3 -378,300.4 	"/>
@@ -34,18 +31,47 @@
           </g>
         </svg></a>
       </div>
-      <div class="menu-icon"></div>
-      <ul class="menu">
-        <li><a href="{{site.baseurl}}/" class="linkUnderline" title="Blog Home">Blog</a></li>
-        <li><a href="{{site.baseurl}}/archive.html" class="linkUnderline" title="Archived Posts">Archive</a></li>
-        <li><a href="http://www.christopherianmurphy.com" class="linkUnderline" title="Portfolio of Work">Work</a></li>
-      </ul>
+      <div class="menu-container">
+        <!-- Hamburger -->
+        <div class="menu-icon"></div>
+        <!-- Search input -->
+        <input type="text" v-model="searchItem" class="search-input">
+        <i class="material-icons search-icon">search</i>
+        <!-- Top-level navigation -->
+        <ul class="menu">
+          <li><a href="{{ site.baseurl }}/" class="linkUnderline" title="Blog Home">Blog</a></li>
+          <li><a href="{{ site.baseurl }}/archive.html" class="linkUnderline" title="Archived Posts">Archive</a></li>
+          <li><a href="http://www.christopherianmurphy.com" class="linkUnderline" title="Portfolio of Work">Work</a></li>
+        </ul>
+      </div>
     </main>
   </nav>
+  <!-- Search results -->
+  <section class="search-container" v-if="searchItem.length !== 0" v-cloak>
+    <ul>
+      <li v-for="post in filterSearch">
+        {% raw %}
+        <h4>
+          <a :href="post.url" class="linkUnderline">
+            {{ post.title }}
+          </a>
+        </h4>
+        <ul>
+          <li v-for="tag in post.tags" class="search-tag tags">
+            <a class="button">
+              {{ tag }}
+            </a>
+          </li>
+        </ul>
+        {% endraw %}
+      </li>
+    </ul>
+  </section>
+  <!-- masthead -->
   <div class="masthead{% if page.title %} masthead--post{% endif %}">
     <header class="wrapper">
-      <h1>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</h1>
-      <p>{% if page.tagline %}{{page.tagline}}{% else %}{{site.tagline}}{% endif %}</p>
+      <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+      <p>{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
     </header>
   </div>
 </header>
