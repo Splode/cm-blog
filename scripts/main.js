@@ -10,15 +10,30 @@ $(document).ready(function() {
 new Vue({
   el: '#app-container',
   data: {
-    searchItem: '',
+    searchObj: {
+      searchItem: '',
+      open: false,
+    },
     posts: posts,
   },
   computed: {
     filterSearch: function() {
       var vm = this;
       return this.posts.filter(function(element) {
-        return element.title.toLowerCase().match(vm.searchItem.toLowerCase());
+        return element.title.toLowerCase().match(vm.searchObj.searchItem.toLowerCase());
       });
+    },
+  },
+  methods: {
+    searchClose: function() {
+      this.searchToggle();
+      this.searchClear();
+    },
+    searchClear: function() {
+      this.searchObj.searchItem = '';
+    },
+    searchToggle: function() {
+      this.searchObj.open = !this.searchObj.open;
     },
   },
   created: function() {

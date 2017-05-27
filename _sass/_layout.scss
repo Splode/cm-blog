@@ -369,6 +369,7 @@ nav {
 
 .search-icon {
   color: $brightPurple;
+  cursor: pointer;
 }
 
 .search-input {
@@ -407,3 +408,14 @@ nav {
 // SVG Logo Classes
 .st0{fill:#6B59EF;}
 .st1{fill:none;}
+
+[v-cloak] {
+  display: none;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0
+}

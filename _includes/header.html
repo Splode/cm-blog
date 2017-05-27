@@ -32,22 +32,36 @@
         </svg></a>
       </div>
       <div class="menu-container">
+        <!-- Search input -->
+        <!-- <input type="text" v-model="searchObj.searchItem" class="search-input">
+        <transition name="fade" mode="out-in">
+          <i class="material-icons search-icon"
+          @click="searchToggle"
+          v-if="!searchObj.open && searchObj.searchItem.length === 0">
+          search
+        </i>
+        <i class="material-icons search-icon"
+        @click="searchClose"
+        v-if="searchObj.open || searchObj.searchItem.length !== 0"
+        v-cloak>
+        close
+      </i>
+    </transition> -->
+    <!-- Top-level navigation -->
+    <ul class="menu">
+      <li><a href="{{ site.baseurl }}/" class="linkUnderline" title="Blog Home">Blog</a></li>
+      <li><a href="{{ site.baseurl }}/archive.html" class="linkUnderline" title="Archived Posts">Archive</a></li>
+      <li><a href="http://www.christopherianmurphy.com" class="linkUnderline" title="Portfolio of Work">Work</a></li>
+    </ul>
         <!-- Hamburger -->
         <div class="menu-icon"></div>
-        <!-- Search input -->
-        <input type="text" v-model="searchItem" class="search-input">
-        <i class="material-icons search-icon">search</i>
-        <!-- Top-level navigation -->
-        <ul class="menu">
-          <li><a href="{{ site.baseurl }}/" class="linkUnderline" title="Blog Home">Blog</a></li>
-          <li><a href="{{ site.baseurl }}/archive.html" class="linkUnderline" title="Archived Posts">Archive</a></li>
-          <li><a href="http://www.christopherianmurphy.com" class="linkUnderline" title="Portfolio of Work">Work</a></li>
-        </ul>
       </div>
     </main>
   </nav>
-  <!-- Search results -->
-  <section class="search-container" v-if="searchItem.length !== 0" v-cloak>
+<!-- Search results -->
+<!-- Vue logic -->
+<!-- <transition name="fade" mode="out-in">
+  <section class="search-container" v-if="searchObj.searchItem.length !== 0 || searchObj.open" v-cloak>
     <ul>
       <li v-for="post in filterSearch">
         {% raw %}
@@ -67,11 +81,12 @@
       </li>
     </ul>
   </section>
-  <!-- masthead -->
-  <div class="masthead{% if page.title %} masthead--post{% endif %}">
-    <header class="wrapper">
-      <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-      <p>{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
-    </header>
-  </div>
+</transition> -->
+<!-- masthead -->
+<div class="masthead{% if page.title %} masthead--post{% endif %}">
+  <header class="wrapper">
+    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+    <p>{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
+  </header>
+</div>
 </header>
