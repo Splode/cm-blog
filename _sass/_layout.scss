@@ -219,6 +219,7 @@ nav {
 .button {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   color: $plumMeat;
+  cursor: pointer;
   display: inline-block;
   padding: 0.5em 1em;
   transition: all 0.3s ease-in-out;
@@ -355,6 +356,35 @@ nav {
   }
 }
 
+.search-container {
+  background-color: $plum;
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.search-icon {
+  color: $brightPurple;
+  cursor: pointer;
+}
+
+.search-input {
+  background: transparent;
+  border: 2px solid $brightPurple;
+  border-radius: 25px;
+  color: $white;
+  outline: none;
+  padding-left: 1em;
+}
+
+.search-tag {
+  display: inline;
+}
+
 .tags {
   color: $plumMeat;
   font-size: 0.85em;
@@ -373,4 +403,19 @@ nav {
   margin: 0 auto;
   max-width: 1080px;
   padding: 0 2.5%;
+}
+
+// SVG Logo Classes
+.st0{fill:#6B59EF;}
+.st1{fill:none;}
+
+[v-cloak] {
+  display: none;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0
 }

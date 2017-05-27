@@ -3,7 +3,9 @@
 {% include head.html %}
 
 <body>
+<div id="app-container">
   {% include header.html %}
+
   <main class="wrapper">
     <div class="main-container">
       <div class="article-container">
@@ -17,6 +19,12 @@
   </main>
   <!-- Footer -->
   {% include footer.html %}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<script type="text/javascript" src="/scripts/search.json"></script>
+<script type="text/javascript" src="/scripts/main.js"></script>
 </body>
 
 </html>
