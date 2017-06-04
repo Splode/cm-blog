@@ -1,4 +1,4 @@
-<header>
+<header id="app-header">
   <nav role="navigation" :class="navBar">
     <main class="wrapper">
       <div class="logo">
@@ -32,21 +32,23 @@
         </svg></a>
       </div>
       <div class="menu-container">
+
         <!-- Search input -->
-        <!-- <input type="text" v-model="searchObj.searchItem" class="search-input">
+         <input type="text" v-model="searchObj.searchItem" class="search-input">
         <transition name="fade" mode="out-in">
           <i class="material-icons search-icon"
           @click="searchToggle"
-          v-if="!searchObj.open && searchObj.searchItem.length === 0">
+          v-if="!searchOpen">
           search
         </i>
         <i class="material-icons search-icon"
         @click="searchClose"
-        v-if="searchObj.open || searchObj.searchItem.length !== 0"
+        v-if="searchOpen"
         v-cloak>
         close
       </i>
-    </transition> -->
+    </transition> 
+
     <!-- Top-level navigation -->
     <ul class="menu">
       <li><a href="{{ site.baseurl }}/" class="linkUnderline" title="Blog Home">Blog</a></li>
@@ -58,10 +60,12 @@
       </div>
     </main>
   </nav>
+
 <!-- Search results -->
 <!-- Vue logic -->
-<!-- <transition name="fade" mode="out-in">
-  <section class="search-container" v-if="searchObj.searchItem.length !== 0 || searchObj.open" v-cloak>
+ <transition name="fade" mode="out-in">
+  <section class="search-container" v-if="searchOpen" v-cloak>
+  <!--<section class="search-container" v-if="searchObj.searchItem.length !== 0 || searchObj.open" v-cloak>-->
     <ul>
       <li v-for="post in filterSearch">
         {% raw %}
@@ -81,7 +85,8 @@
       </li>
     </ul>
   </section>
-</transition> -->
+</transition> 
+
 <!-- masthead -->
 <div class="masthead{% if page.title %} masthead--post{% endif %}">
   <header class="wrapper">
