@@ -1,0 +1,8 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.tabCompletion": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+}
