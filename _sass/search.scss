@@ -3,15 +3,18 @@
   display: flex;
   flex-direction: column;
   margin-top: 75px;
+  overflow-y: scroll;
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  //height: 100vh;
+  height: 100%;
   z-index: 1000;
 }
 
 .search-icon {
   color: $brightPurple;
   cursor: pointer;
+  margin: 0 .5em;
 }
 
 .search-input {
@@ -22,6 +25,7 @@
   opacity: 0;
   outline: none;
   padding-left: 1em;
+  transition: all .3s ease;
   width: 0;
 }
 
@@ -37,13 +41,14 @@
   display: inline;
 }
 
+.search-container li:last-child {
+    padding-bottom: 6em;
+}
+
 @keyframes input-open {
     0% {
         opacity: 0;
-        width: 0px;
-    }
-    50% {
-        opacity: 1;
+        width: 0;
     }
     100% {
         opacity: 1;
@@ -60,6 +65,7 @@
         opacity: 0;
     }
     100% {
+        opacity: 0;
         width: 0;
     }
 }

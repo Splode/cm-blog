@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Mobile menu icon toggle
-  $(".menu-icon").click(function() {
+  $(".menu-icon").click(function () {
     $(".menu").slideToggle("slow");
   });
 
@@ -58,22 +58,26 @@ new Vue({
     searchObj: {
       searchItem: '',
       open: false,
+      searchInput: {
+        active: false,
+        inactive: false,
+      },
     },
     posts: posts,
   },
 
   computed: {
     // Search
-    filterSearch: function() {
+    filterSearch: function () {
       var vm = this;
       var searchItem = this.searchObj.searchItem.toLowerCase();
       // filter posts by title and tags against search query
-      return this.posts.filter(function(element) {
+      return this.posts.filter(function (element) {
         // concatenate tags into single string
-        var tags = element.tags.reduce(function(acc, item) {
+        var tags = element.tags.reduce(function (acc, item) {
           acc += item.toLowerCase();
           return acc;
-      }, "")
+        }, "")
         return (element.title.toLowerCase().match(searchItem) || tags.match(searchItem));
       });
     },
@@ -128,8 +132,17 @@ new Vue({
     searchClear: function () {
       this.searchObj.searchItem = '';
     },
+    // Toggle search input form
     searchToggle: function () {
-      this.searchObj.open = !this.searchObj.open;
+      if (this.searchObj.searchInput.active) {
+        this.searchObj.searchInput.active = false;
+        this.searchObj.searchInput.inactive = true;
+        // Clear search input and close search menu
+        this.searchClear();
+      } else {
+        this.searchObj.searchInput.active = true;
+        this.searchObj.searchInput.inactive = false;
+      }
     },
   },
 
