@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Mobile menu icon toggle
-  $(".menu-icon").click(function() {
+  $(".menu-icon").click(function () {
     $(".menu").slideToggle("slow");
   });
 
@@ -8,7 +8,7 @@ $(document).ready(function() {
 });
 
 // new Vue({
-//   el: '#app-container',
+//   el: '#app-header',
 //   data: {
 //     searchObj: {
 //       searchItem: '',
@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 // Scroll Collapse / Expand
 new Vue({
-  el: '#app-container',
+  el: '#app-header',
   data: {
     // Classes assigned to nav on scroll
     navBar: {
@@ -53,8 +53,41 @@ new Vue({
       open: false,
     },
     scrollState: 0, // Used to keep track of scroll position
+
+    // Search
+    searchObj: {
+      searchItem: '',
+      open: false,
+      searchInput: {
+        active: false,
+        inactive: false,
+      },
+    },
+    posts: posts,
   },
+
+  computed: {
+    // Search
+    filterSearch: function () {
+      var vm = this;
+      var searchItem = this.searchObj.searchItem.toLowerCase();
+      // filter posts by title and tags against search query
+      return this.posts.filter(function (element) {
+        // concatenate tags into single string
+        var tags = element.tags.reduce(function (acc, item) {
+          acc += item.toLowerCase();
+          return acc;
+        }, "")
+        return (element.title.toLowerCase().match(searchItem) || tags.match(searchItem));
+      });
+    },
+    searchOpen: function () {
+      return (this.searchObj.searchItem.length === 0 || this.searchObj.open) ? false : true;
+    },
+  },
+
   methods: {
+    // Scroll Expansion
     scrollDetect: function (home, down, up) {
       // Current scroll position
       var currentScroll = this.scrollTop();
@@ -77,19 +110,49 @@ new Vue({
     },
     // Called when scrolled down
     scrollDown: function () {
-      this.navBar.collapse = true;
-      this.navBar.open = false;
+      // Collapse if search is not open
+      if (!this.searchOpen) {
+        this.navBar.collapse = true;
+        this.navBar.open = false;
+      }
     },
     // Called when scolled up
     scrollUp: function () {
-      this.navBar.collapse = false;
-      this.navBar.open = true;
+      // Expand if search is not open
+      if (!this.searchOpen) {
+        this.navBar.collapse = false;
+        this.navBar.open = true;
+      }
+    },
+
+    // Search
+    searchClose: function () {
+      this.searchClear();
+    },
+    searchClear: function () {
+      this.searchObj.searchItem = '';
+    },
+    // Toggle search input form
+    searchToggle: function () {
+      if (this.searchObj.searchInput.active) {
+        this.searchObj.searchInput.active = false;
+        this.searchObj.searchInput.inactive = true;
+        // Clear search input and close search menu
+        this.searchClear();
+      } else {
+        this.searchObj.searchInput.active = true;
+        this.searchObj.searchInput.inactive = false;
+      }
     },
   },
+
   created: function () {
     var vm = this;
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       vm.scrollDetect(vm.scrollHome, vm.scrollDown, vm.scrollUp);
     });
+
+    // Search
+    console.log(posts);
   }
 });

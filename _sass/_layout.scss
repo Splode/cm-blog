@@ -125,7 +125,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 25px 2.5%;
+    //padding: 25px 2.5%;
   }
 
   li,
@@ -147,7 +147,7 @@ nav {
   }
 
   .logo {
-    margin-top: -5px;
+    margin-top: 0;
   }
 
   .logo svg {
@@ -168,7 +168,7 @@ nav {
       display: none;
       height: 100vh;
       left: 0;
-      margin-top: 75px;
+      margin-top: 80px;
       padding: 0;
       position: absolute;
       top: 0;
@@ -181,7 +181,7 @@ nav {
     }
 
     li {
-      border-bottom: 2px solid $brightPurple;
+      //border-bottom: 2px solid $brightPurple;
       font-size: 1.5em;
       padding: 1.25em 0;
       text-align: center;
@@ -194,10 +194,6 @@ nav {
 
     .logo {
       float: left;
-    }
-
-    .wrapper {
-      display: block;
     }
   }
 }
@@ -311,19 +307,6 @@ nav {
   }
 }
 
-.menu-icon {
-  background: url("../assets/images/hamburger.svg") no-repeat;
-  background-position: top right;
-  background-size: 50%;
-  display: none;
-  float: right;
-  height: 60px;
-  width: 60px;
-  @media only screen and (max-width: $tablet) {
-    display: block;
-  }
-}
-
 .paginator {
   border-top: 2px solid $brightPurple;
   display: flex;
@@ -355,35 +338,6 @@ nav {
     margin: 0 0 1em;
     padding: 0;
   }
-}
-
-.search-container {
-  background-color: $plum;
-  display: flex;
-  flex-direction: column;
-  margin-top: 75px;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-}
-
-.search-icon {
-  color: $brightPurple;
-  cursor: pointer;
-}
-
-.search-input {
-  background: transparent;
-  border: 2px solid $brightPurple;
-  border-radius: 25px;
-  color: $white;
-  outline: none;
-  padding-left: 1em;
-}
-
-.search-tag {
-  display: inline;
 }
 
 .tags {
@@ -419,4 +373,17 @@ nav {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
   opacity: 0
+}
+
+.fade-in {
+  animation: fade-in 1s ease forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

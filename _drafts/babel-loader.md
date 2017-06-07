@@ -7,7 +7,7 @@ author: Christopher Murphy
 description: ''
 excerpt: ''
 image: /assets/images/posts/
-categories: Babel ES2015 JavaScript tooling Webpack
+categories: Babel ES2015 JavaScript tooling webpack
 ---
 
 ### Babel Loader

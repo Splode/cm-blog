@@ -1,3 +1,34 @@
+nav main {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: .85em;
+  }
+}
+
+.menu-icon {
+  //background: url("../assets/images/hamburger.svg") no-repeat;
+  //background-position: top right;
+  //background-size: 50%;
+  color: $white;
+  display: none;
+  font-size: 2.25em;
+  //float: right;
+  //height: 60px;
+  //width: 60px;
+  @media only screen and (max-width: $tablet) {
+    display: block;
+  }
+}
+
 // Collapse nav bar on scroll down
 .collapse {
   animation: collapse .5s ease forwards;
