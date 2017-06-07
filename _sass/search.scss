@@ -1,5 +1,5 @@
 .search-container {
-  background-color: $plum;
+  background-color: $white;
   display: flex;
   flex-direction: column;
   margin-top: 75px;
@@ -11,10 +11,32 @@
   z-index: 1000;
 }
 
+.search-container h2 {
+    margin-top: 6em;
+    text-align: center;
+}
+
+.search-container h4 {
+    margin-bottom: .75em;
+}
+
+.search-container > ul li:last-child {
+    padding-bottom: 6em;
+}
+
+.search-container ul.tags li {
+    margin-right: 1em;
+}
+
 .search-icon {
   color: $brightPurple;
   cursor: pointer;
   margin: 0 .5em;
+  transition: all .3s ease;
+
+  &:hover {
+    color: $white;
+  }
 }
 
 .search-input {
@@ -35,14 +57,6 @@
 
 .search-input.inactive {
     animation: input-close .3s ease forwards;
-}
-
-.search-tag {
-  display: inline;
-}
-
-.search-container li:last-child {
-    padding-bottom: 6em;
 }
 
 @keyframes input-open {

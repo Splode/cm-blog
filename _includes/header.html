@@ -58,6 +58,7 @@
         </ul>
         <!-- Hamburger -->
         <div class="menu-icon"></div>
+        <!--<i class="material-icons">menu</i>-->
       </div>
     </main>
   </nav>
@@ -68,6 +69,7 @@
     <section class="search-container" v-if="searchOpen">
       <!--<section class="search-container" v-if="searchObj.searchItem.length !== 0 || searchObj.open" v-cloak>-->
       <div class="wrapper" v-cloak>
+        <h2 v-if="filterSearch.length === 0">Nothing matches your search.</h2>
         <ul>
           <li v-for="post in filterSearch">
             {% raw %}
@@ -76,9 +78,9 @@
             {{ post.title }}
           </a>
             </h4>
-            <ul>
-              <li v-for="tag in post.tags" class="search-tag tags">
-                <a class="button">
+            <ul class="tags">
+              <li v-for="tag in post.tags" class="search-tag">
+                <a class="button" :href="'/archive.html#' + tag">
               {{ tag }}
             </a>
               </li>
