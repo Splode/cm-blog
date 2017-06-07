@@ -70,7 +70,7 @@ new Vue({
     // Search
     filterSearch: function () {
       var vm = this;
-      var searchItem = this.searchObj.searchItem.toLowerCase();
+      var searchItem = this.searchObj.searchItem.toLowerCase().trim();
       // filter posts by title and tags against search query
       return this.posts.filter(function (element) {
         // concatenate tags into single string
