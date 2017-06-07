@@ -57,8 +57,8 @@
           <li><a href="http://www.christopherianmurphy.com" class="linkUnderline" title="Portfolio of Work">Work</a></li>
         </ul>
         <!-- Hamburger -->
-        <div class="menu-icon"></div>
-        <!--<i class="material-icons">menu</i>-->
+        <!--<div class="menu-icon"></div>-->
+        <i class="material-icons menu-icon">menu</i>
       </div>
     </main>
   </nav>
@@ -71,7 +71,7 @@
       <div class="wrapper" v-cloak>
         <h2 v-if="filterSearch.length === 0">Nothing matches your search.</h2>
         <ul>
-          <li v-for="post in filterSearch">
+          <li v-for="post in filterSearch" class="search-post">
             {% raw %}
             <h4>
               <a :href="post.url" class="linkUnderline">

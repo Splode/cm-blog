@@ -125,7 +125,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 25px 2.5%;
+    //padding: 25px 2.5%;
   }
 
   li,
@@ -147,7 +147,7 @@ nav {
   }
 
   .logo {
-    margin-top: -5px;
+    margin-top: 0;
   }
 
   .logo svg {
@@ -168,7 +168,7 @@ nav {
       display: none;
       height: 100vh;
       left: 0;
-      margin-top: 75px;
+      margin-top: 80px;
       padding: 0;
       position: absolute;
       top: 0;
@@ -181,7 +181,7 @@ nav {
     }
 
     li {
-      border-bottom: 2px solid $brightPurple;
+      //border-bottom: 2px solid $brightPurple;
       font-size: 1.5em;
       padding: 1.25em 0;
       text-align: center;
@@ -194,10 +194,6 @@ nav {
 
     .logo {
       float: left;
-    }
-
-    .wrapper {
-      display: block;
     }
   }
 }
@@ -308,19 +304,6 @@ nav {
   .wrapper {
     border-bottom: 2px solid $brightPurple;
     margin-bottom: 2em;
-  }
-}
-
-.menu-icon {
-  background: url("../assets/images/hamburger.svg") no-repeat;
-  background-position: top right;
-  background-size: 50%;
-  display: none;
-  float: right;
-  height: 60px;
-  width: 60px;
-  @media only screen and (max-width: $tablet) {
-    display: block;
   }
 }
 
