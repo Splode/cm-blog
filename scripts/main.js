@@ -107,6 +107,8 @@ new Vue({
     },
     // Called when scroll is in initial position
     scrollHome: function () {
+      this.navBar.collapse = false;
+      this.navBar.open = true;
     },
     // Called when scrolled down
     scrollDown: function () {
