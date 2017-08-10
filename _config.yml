@@ -13,7 +13,7 @@ github_username:  splode
 markdown: kramdown
 kramdown:
     auto_ids: false
-gems:
+plugins:
 - jekyll-paginate
 # - octopress-minify-html
 - jekyll-minifier

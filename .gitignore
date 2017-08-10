@@ -64,3 +64,4 @@ Temporary Items
 _site
 .sass-cache
 .jekyll-metadata
+.vscode/settings.json
