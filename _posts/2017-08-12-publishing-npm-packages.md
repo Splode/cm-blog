@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Publishing NPM Packages"
-tagline: "Publishing npm packages is riculously simple."
+title: "Publishing npm Packages"
+tagline: "Publishing npm packages and sharing code between projects is ridiculously simple."
 date: 2017-08-12
 author: Christopher Murphy
-description: "A walkthrough of the process for publishing npm packages. This article uses the Bootstrap Nucleus npm package as an example."
-image: /assets/images/posts/
-categories: Bootstrap npm tools
+description: "Publishing npm packages and sharing code between projects is a simple process. This article will walk you through the steps to create, publish, and update your own npm packages."
+image: /assets/images/posts/publishing-npm-packages/publishing-npm-packages.png
+categories: Bootstrap JavaScript npm tools
 excerpt: The Node Package Manager (npm) is a ubiquitous system used in front-end development for sharing and managing useful bits of code between developers and projects. Node packages are published on a central and public directory maintained by npm.
 ---
 
@@ -68,9 +68,9 @@ Be sure to include a README.md file with instructions or usage information so th
 
 After publishing your package, you can test an installation in a project to ensure that it works.
 
-````bash
+```bash
 mkdir npm-test && cd npm-test && npm init -y
-````
+```
 
 ### :star: Tip :star:
 
@@ -81,6 +81,10 @@ Now, install your published package using `npm install my-package` where `my-pac
 ## Updating your Package with Versioning
 
 Npm uses semantic versioning for managing updates to packages. There's quite a bit of nuance to semantic versioning, but the basic principle is that a version number follows a standard numbering convention, which indicates major, minor and patch versions `1.0.0`.
+
+![Basic structure of semantic version numbering](/assets/images/posts/publishing-npm-packages/npm-semver-explained.png "Basic structure of semantic version numbering")
+
+<figcaption>Basic structure of semantic version numbering</figcaption>
 
 1. **Major** - is the first number and indicates an API change that makes the new version incompatible with previous versions. Major releases should be used when an update is required for functionality.
 2. **Minor** - is the second number and indicates a feature update that is backwards-compatible.
