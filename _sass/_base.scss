@@ -56,10 +56,10 @@ p {
 	color: $plumMeat;
 	font-family: $bodyFont;
 	line-height: 2em;
-	text-indent: 2em;
+	// text-indent: 2em;
 }
 
-ul {
+ol, ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;

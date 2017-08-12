@@ -1,26 +1,20 @@
 article {
   //margin-top: 3em;
   //width: $widthMain;
-
   a {
     color: $brightPurple;
     position: relative;
-
     &:hover {
       color: $plumMeat;
     }
   }
-
   footer {
-    border-top: 2px solid $brightPurple;
-    //padding-bottom: 3em;
+    border-top: 2px solid $brightPurple; //padding-bottom: 3em;
     padding-top: 1em;
     margin-top: 2em;
-
     p {
       display: inline;
     }
-
     time {
       font-size: 1em;
     }
@@ -28,27 +22,32 @@ article {
       border-bottom: 2px solid $brightPurple;
     }
   }
-
   h2 {
-    margin: 1em 0 0.5em;
+    margin: 3em 0 0.5em;
   }
-
   h2:first-child {
     margin-top: 0;
   }
-
   h3 {
     color: $plumMeat;
-    margin: 0 0 0.5em;
+    margin: 1.5em 0 0.5em;
   }
-
   img {
     height: auto;
     width: 100%;
   }
-
   p {
     margin: 0 0 1em;
+  }
+  ol {
+    line-height: 2em;
+    list-style-type: decimal;
+    margin: 0 0 1.5em 2em;
+  }
+  ul {
+    line-height: 2em;
+    list-style-type: disc;
+    margin-left: 2em;
   }
   @media only screen and (max-width: $tablet) {
     width: 100%;
@@ -57,33 +56,27 @@ article {
 
 article.preview {
   margin-bottom: 6em;
-
   a {
     color: $brightPurple;
     font-weight: bold;
   }
-
   h2 {
     font-size: 1.75em;
     margin: 1em 0 0.5em;
   }
-
   p {
     margin-bottom: 0.5em;
     margin-top: 0;
   }
-
   time {
     display: inline-block;
     padding-bottom: 1em;
   }
-
   .tagline {
     font-size: 1.2em;
     font-weight: bold;
     text-indent: 0;
   }
-
   &:last-child {
     margin-bottom: 0;
   }
@@ -95,7 +88,6 @@ aside {
   //right: 0;
   //top: 0;
   width: 20%;
-
   h3 {
     margin-top: 0;
   }
@@ -105,6 +97,10 @@ aside {
     text-align: center;
     width: 100%;
   }
+}
+
+blockquote+p {
+  margin-left: 2em;
 }
 
 main {
@@ -120,14 +116,11 @@ nav {
   position: fixed;
   top: 0;
   z-index: 1;
-
   .wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    //padding: 25px 2.5%;
+    justify-content: space-between; //padding: 25px 2.5%;
   }
-
   li,
   ul {
     color: $white;
@@ -137,23 +130,18 @@ nav {
     margin: 0;
     text-align: right;
   }
-
   li {
     padding-right: 2em;
   }
-
   li:last-of-type {
     padding-right: 0;
   }
-
   .logo {
     margin-top: 0;
   }
-
   .logo svg {
     height: 35px;
   }
-
   .logo a svg .st0 {
     transition: fill 0.25s ease-in-out;
   }
@@ -175,11 +163,9 @@ nav {
       width: 100%;
       z-index: -1;
     }
-
     ul a {
       padding: 1em 4em;
     }
-
     li {
       //border-bottom: 2px solid $brightPurple;
       font-size: 1.5em;
@@ -187,11 +173,9 @@ nav {
       text-align: center;
       width: 100%;
     }
-
     li:last-of-type {
       border-bottom: none;
     }
-
     .logo {
       float: left;
     }
@@ -203,7 +187,6 @@ nav {
     color: $plumMeat;
     display: inline;
   }
-
   a {
     color: inherit;
   }
@@ -220,7 +203,6 @@ nav {
   display: inline-block;
   padding: 0.5em 1em;
   transition: all 0.3s ease-in-out;
-
   &:active,
   &:focus,
   &:hover {
@@ -241,7 +223,6 @@ nav {
   min-width: 100%;
   padding: 2em 0;
   text-align: center;
-
   p {
     font-size: 0.85em;
     margin: 0;
@@ -250,7 +231,6 @@ nav {
 
 .article-container {
   width: $widthMain;
-
   @media only screen and (max-width: $tablet) {
     width: 100%;
   }
@@ -259,7 +239,6 @@ nav {
 .main-container {
   display: flex;
   justify-content: space-between;
-
   @media only screen and (max-width: $tablet) {
     flex-direction: column;
   }
@@ -268,20 +247,17 @@ nav {
 .masthead {
   background-color: $plum;
   min-width: 100%;
-
   h1 {
     color: $white;
     font-size: 2.75em;
     padding-top: 3em;
   }
-
   p {
     color: $brightPurple;
     font-size: 1.33em;
     margin-top: 0;
     padding-bottom: 4em;
   }
-
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -291,16 +267,13 @@ nav {
 
 .masthead--post {
   background-color: $white;
-
   h1 {
     color: $plum;
   }
-
   p {
     color: $plumMeat;
     padding-bottom: 1em;
   }
-
   .wrapper {
     border-bottom: 2px solid $brightPurple;
     margin-bottom: 2em;
@@ -313,7 +286,6 @@ nav {
   justify-content: space-between;
   margin-top: 2em;
   width: $widthMain;
-
   a {
     color: $brightPurple;
     font-weight: bold;
@@ -325,13 +297,11 @@ nav {
 
 .recent {
   padding: 0;
-
   h4 {
     color: $plumMeat;
     margin: 0;
     padding: 0;
   }
-
   time {
     display: inline-block;
     font-size: 0.85em;
@@ -345,11 +315,9 @@ nav {
   font-size: 0.85em;
   margin-bottom: 3em;
   padding: 0;
-
   li {
     background-color: $grey;
-    display: inline-block;
-    //padding: .5em;
+    display: inline-block; //padding: .5em;
     margin-bottom: 0.5em;
   }
 }
@@ -361,17 +329,28 @@ nav {
 }
 
 // SVG Logo Classes
-.st0{fill:#6B59EF;}
-.st1{fill:none;}
+.st0 {
+  fill: #6B59EF;
+}
+
+.st1 {
+  fill: none;
+}
 
 [v-cloak] {
   display: none;
 }
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity .5s
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active in <2.1.8 */
+
+{
   opacity: 0
 }
 
