@@ -1,0 +1,11 @@
+# redirects for permalinks published before setting permalinks to pretty-style
+Redirect /2016/01/navicons.html /2016/01/navicons/
+Redirect /2016/01/responsive-pure-css-menu.html /2016/01/responsive-pure-css-menu/
+Redirect /2017/03/intro-to-vuejs-nato-converter.html /2017/03/intro-to-vuejs-nato-converter/
+Redirect /2017/04/glowing-button.html /2017/04/glowing-button/
+Redirect /2017/04/underline-text-colors.html /2017/04/underline-text-colors/
+Redirect /2017/04/vue-transitions.html /2017/04/vue-transitions/
+Redirect /2017/04/vuejs-dropdown.html /2017/04/vuejs-dropdown/
+Redirect /2017/04/webpack-basic.html /2017/04/webpack-basic/
+Redirect /2017/05/expand-collapse-navbar.html /2017/05/expand-collapse-navbar/
+Redirect /2017/08/publishing-npm-packages.html /2017/08/publishing-npm-packages/

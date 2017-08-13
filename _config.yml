@@ -21,7 +21,7 @@ plugins:
 - emoji_for_jekyll
 paginate: 7
 paginate_path: 'blog/page:num'
-permalink: /:year/:month/:title.html
+permalink: /:year/:month/:title/
 exclude:
   - Gemfile
   - Gemfile.lock
