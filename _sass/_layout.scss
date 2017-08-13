@@ -230,6 +230,7 @@ nav {
 }
 
 .article-container {
+  margin-bottom: 2em;
   width: $widthMain;
   @media only screen and (max-width: $tablet) {
     width: 100%;

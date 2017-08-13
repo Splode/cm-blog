@@ -4,19 +4,28 @@
 
 <body class="fade-in">
   <div id="app-container">
+
     {% include header.html %}
 
     <main class="wrapper">
       <div class="main-container">
+
         <div class="article-container">
           {{ content }}
         </div>
+        
         {% include sidebar.html %}
       </div>
-      <div class="paginator-container">
-        {% include paginator.html %}
-      </div>
+
+      <!-- don't show paginator on posts -->
+      {% unless page.layout == 'post' %}
+        <div class="paginator-container">
+          {% include paginator.html %}
+        </div>
+      {% endunless %}
+
     </main>
+    
     <!-- Footer -->
     {% include footer.html %}
   </div>

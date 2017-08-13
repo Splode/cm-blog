@@ -23,7 +23,7 @@ page-type: post
 
   <footer>
 
-    <p>Written by <strong>{{ page.author }}</strong> &mdash; </p><time itemprop="dateCreated" datetime="{ {page.date }}">{{ page.date | date:"%B %-d, %Y" }}</time>
+    <p>Written by <strong>{{ page.author }}</strong> &mdash; </p><time itemprop="dateCreated" datetime="{{ page.date }}">{{ page.date | date:"%B %-d, %Y" }}</time>
     
     <h4>Post Tags</h4>
 
