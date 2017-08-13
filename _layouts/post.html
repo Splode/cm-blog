@@ -2,19 +2,76 @@
 layout: default
 page-type: post
 ---
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1404754592936221";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <article>
+
   {% if page.image %}
     <img src="{{ page.image }}" alt="{{ page.description }}" title="{{ page.title }}">
   {% endif %}
+
   {{ content }}
+
   <footer>
 
     <p>Written by <strong>{{ page.author }}</strong> &mdash; </p><time itemprop="dateCreated" datetime="{ {page.date }}">{{ page.date | date:"%B %-d, %Y" }}</time>
+    
     <h4>Post Tags</h4>
+
     <ul class="tags">
       {% for category in page.categories %}
       <li><a href="{{ site.baseurl }}/archive.html#{{ category | cgi_escape }}" class="button">{{ category }}</a></li>
       {% endfor %}
     </ul>
+
+    <!-- social media share buttons -->
+    <h4>Share</h4>
+    <div class="ShareButtonContainer">
+
+      <ul class="ShareButtonContainer-list">
+
+        <!-- LinkedIn share button -->
+        <!-- <li class="ShareButtonContainer-list-item">
+          <script src="//platform.linkedin.com/in.js" type="text/javascript">
+            lang: en_US
+          </script>
+          <script type="IN/Share" data-url="https://blog.christopherianmurphy.com/{{ page.url }}"></script>
+        </li> -->
+
+        <!-- Twitter share button -->
+        {% capture hashtags %}
+          {% for category in page.categories %}
+            {{ category }},
+          {% endfor %}
+        {% endcapture %}
+        <li class="ShareButtonContainer-list-item">
+          <a href="https://twitter.com/intent/tweet" 
+            class="twitter-share-button" 
+            data-url="{{ site.url }}{{ page.url }}"
+            data-text="{{ page.title }}"
+            data-hashtags="{{ hashtags }}">
+            <!-- <i class="fa fa-twitter" aria-hidden="true"></i> -->
+          </a>
+        </li>
+
+        <!-- Facebook share button -->
+        <li class="ShareButtonContainer-list-item">
+          <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-layout="button">
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+
   </footer>
 </article>
