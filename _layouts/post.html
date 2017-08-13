@@ -39,6 +39,16 @@ page-type: post
 
       <ul class="ShareButtonContainer-list">
 
+        <li class="ShareButtonContainer-list-item">
+            <a href="//www.reddit.com/submit" 
+            class="ShareButton"
+            target="_blank"
+            onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location) + '&title={{ page.title }} - {{ page.tagline }}'; return false">
+            <i class="fa fa-reddit-alien"></i>
+            reddit
+            </a>
+        </li>
+
         <!-- LinkedIn share button -->
         <!-- <li class="ShareButtonContainer-list-item">
           <script src="//platform.linkedin.com/in.js" type="text/javascript">

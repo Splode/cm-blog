@@ -7,6 +7,19 @@
   display: inline-block;
 }
 
+.ShareButton {
+  background: $plumMeat;
+  border-radius: 3px;
+  color: $white;
+  font-size: .75em;
+  padding: 1px 6px;
+
+  &:hover {
+    background: $brightPurple;
+    color: $white;
+  }
+}
+
 // important for getting social share buttons to align
 .IN-widget {
   margin-top: 4px;
