@@ -4,16 +4,16 @@ page-type: post
 ---
 <article>
   {% if page.image %}
-  <img src="{{ page.image }}" alt="{{ page.description }}" title="{{ page.title }}">
+    <img src="{{ page.image }}" alt="{{ page.description }}" title="{{ page.title }}">
   {% endif %}
-  {{content}}
+  {{ content }}
   <footer>
 
-    <p>Written by <strong>{{page.author}}</strong> &mdash; </p><time itemprop="dateCreated" datetime="{{page.date}}">{{page.date | date:"%B %-d, %Y"}}</time>
+    <p>Written by <strong>{{ page.author }}</strong> &mdash; </p><time itemprop="dateCreated" datetime="{ {page.date }}">{{ page.date | date:"%B %-d, %Y" }}</time>
     <h4>Post Tags</h4>
     <ul class="tags">
       {% for category in page.categories %}
-      <li><a href="{{site.baseurl}}/archive.html#{{category | cgi_escape}}" class="button">{{category}}</a></li>
+      <li><a href="{{ site.baseurl }}/archive.html#{{ category | cgi_escape }}" class="button">{{ category }}</a></li>
       {% endfor %}
     </ul>
   </footer>
