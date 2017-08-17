@@ -1,41 +1,44 @@
 ---
 layout: post
-title: "Top 10 Visual Studio Code Extensions"
-tagline: "10 Excellent Visual Studio Code Extensions for Front-End Development"
-date: 2017-08-08
+title: "10 Essential Extensions for Visual Studio Code"
+tagline: "A collection of useful extensions for front-end development in Microsoft Visual Studio Code"
+date: 2017-08-17
 author: Christopher Murphy
 description: "The best Visual Studio Code extensions for front-end development in 2017."
-image: /assets/images/posts/010_winsome-trivia/010_winsome-trivia.png
+excerpt: VS Code is a powerful editor right out of the box, but there are many great extensions available that add some great functionality and flavor. What follows is my top-10 list of the most useful extensions for front-end development in VSCode.
+image: /assets/images/posts/top-vscode-extensions/visual-studio-code-logo.png
 categories: editor extensions tools VSCode
 ---
 
-# 10 Essential Extensions for Visual Studio Code
-
-*A collection of useful extensions for front-end development in Microsoft Visual Studio Code*
-
 ## VS Code Extensions
 
-Microsoft’s Visual Studio Code (VSCode) is a robust, open-source(!), multi-platform editor that has quickly become my code editor of choice. VSCode has some really great features like Intellisense, native Git support and Emmet implementation. It’s also extensible and quite customizable.
+Microsoft’s [Visual Studio Code][vscode] (VSCode) is a robust, open-source(!), multi-platform editor that has quickly become my code editor of choice. VSCode has some really great features like Intellisense, native Git support and Emmet implementation. It’s also extensible and quite customizable.
 
 VS Code is a powerful editor right out of the box, but there are many great extensions available that add some great functionality and flavor. What follows is my top-10 list of the most useful extensions for front-end development in VSCode:
 
 ### 10. [Dracula][dracula] or [One Dark Pro][oneDark]
 
+![Dark themes for VSCode: Dracula and One Dark Pro](/assets/images/posts/top-vscode-extensions/vscode-dark-themes.png "Dark themes for VSCode: Dracula and One Dark Pro")
+
 Up first is one of two color themes. I get a lot of simple pleasure out of a well balanced color palette for my coding environment. I also find that dark color palettes are easier on my eyes, especially when working late at night. 
 
 Take your pick of the following two themes—they're both nicely designed, highly rated, and have a wide fan base, which means that you'll likely be able to find versions of each theme for a plethora of other apps. 
 
-#### Dracula
+#### [Dracula][dracula]
 
-*Dracula* is a popular theme that has support for lots of different applications, including Slack and Terminal. Dracula is my current theme of choice, though One Dark Pro is a close second. 
+[Dracula][dracula] is a popular theme that has support for lots of different applications, including Slack and Terminal. Dracula is my current theme of choice, though One Dark Pro is a close second.
 
-#### One Dark Pro
+![Dracula Theme for Visual Studio Code](/assets/images/posts/top-vscode-extensions/vscode-dracula.png "Dracula Theme for Visual Studio Code")
 
- *One Dark Pro* is a port of Atom’s default theme, which is quite nice. Before switching to VSCode, I used Atom and really enjoyed the default theme.
+#### [One Dark Pro][oneDark]
+
+ [One Dark Pro][oneDark] is a port of Atom’s default theme, which is quite nice. Before switching to VSCode, I used Atom and really enjoyed the default theme.
+
+ ![One Dark Pro for Visual Studio Code](/assets/images/posts/top-vscode-extensions/vscode-one-dark-pro.png "One Dark Pro for Visual Studio Code")
 
 ### 9. [HTML CSS Support][html]
 
-[HTML CSS Support] scans your project directory for CSS and SCSS files and provides HTML attribute autocomplete for classes and ids. 
+[HTML CSS Support][html] scans your project directory for CSS and SCSS files and provides HTML attribute autocomplete for classes and ids. 
 
 ### 8. [Code Runner][coderunner]
 
@@ -51,7 +54,7 @@ The [npm][npm] extension provides a few helpful features when working with npm p
 
 ### 5. [Settings Sync][sync]
 
-*Setting Sync* allows you to sync your editor settings, extensions, and snippets between different environments. It does this by using GitHub's gist system as a central store. The process is simple and the extension makes it even simpler with detailed instructions. I use this extension regularly to sync settings between my work and home environments. 
+[Setting Sync][sync] allows you to sync your editor settings, extensions, and snippets between different environments. It does this by using GitHub's gist system as a central store. The process is simple and the extension makes it even simpler with detailed instructions. I use this extension regularly to sync settings between my work and home environments. 
 
 ### 4. [Vetur][vetur]
 
@@ -77,11 +80,13 @@ ESLint is incredibly useful and the one extension that I would recommend to any 
 
 ## Conclusion
 
-VSCode is a powerful and robust editor even without any of the preceding extensions, but each extension provides some convenient and handy functionality. 
+VSCode is a powerful and robust editor even without any of the preceding extensions, but each extension provides some convenient and handy functionality. Be sure to visit the [Visual Studio Marketplace][marketplace] where you can explore all sorts of extensions.
 
 Do you have a favorite extension that you find essential? Let me know.
 
 [vscode]: https://code.visualstudio.com/
+
+[marketplace]: https://marketplace.visualstudio.com/
 
 [ESLint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
