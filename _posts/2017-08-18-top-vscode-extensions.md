@@ -50,7 +50,7 @@ Take your pick of the following two themes—they're both nicely designed, highl
 
 ### 7. [stylelint][stylelint]
 
-The [stylelint][stylelint] extension lints your CSS, SCSS, and LESS files as you type. It’s handy tool that helps to maintain consistent stylesheet formatting between projects and developers.
+The [stylelint][stylelint] extension lints your CSS, SCSS, and LESS files as you type. It’s handy tool that helps to maintain consistent stylesheet formatting between projects and developers. Linting for CSS is arguably less important than linting for JavaScript, but it still provides a good baseline for consistent styles.
 
 ### 6. [npm][npm]
 
