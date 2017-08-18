@@ -1,14 +1,26 @@
 ---
 layout: default
 ---
+
 {% for post in paginator.posts %}
-<article class="preview">
-  <header>
-    <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}"><img src="{{ post.image }}" title="{{ post.title }}" alt="{{ post.title }} preview image"></a>
-    <h2><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" class="linkUnderline" title="Permanent link to {{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-    <p class="tagline">{{ post.tagline }}</p>
-    <time itemprop="dateCreated" datetime="{{ post.date }}">{{post.date | date:"%B %-d, %Y"}}</time>
-    <p>{{ post.excerpt | strip_html }} <a href="{{ site.baseurl }}{{ post.url }}" title="read more" class="linkUnderline">Read more...</a></p>
-  </header>
-</article>
+  <article class="preview">
+    <header>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
+        <img src="{{ post.image }}" title="{{ post.title }}" alt="{{ post.title }} preview image">
+      </a>
+
+      <h2>
+        <a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" class="linkUnderline" title="Permanent link to {{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </h2>
+
+      <p class="tagline">{{ post.tagline }}</p>
+
+      <time itemprop="dateCreated" datetime="{{ post.date }}">{{post.date | date:"%B %-d, %Y"}}</time>
+
+      <p>{{ post.excerpt | strip_html }} <a href="{{ site.baseurl }}{{ post.url }}" title="read more" class="linkUnderline">Read more...</a>
+      </p>
+      
+    </header>
+  </article>
 {% endfor %}
