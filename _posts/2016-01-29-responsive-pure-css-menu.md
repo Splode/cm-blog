@@ -155,8 +155,7 @@ We'll place our `input` menu as a sibling to our logo `div` and navigation `ul`.
 
 {% highlight html %}
 <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="label-toggle"></label>
-</input>
+<label for="menu-toggle" class="label-toggle"></label>
 {% endhighlight %}
 
 In our CSS we'll set both elements to `display: none`.
